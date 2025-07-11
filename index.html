@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +18,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <div class="body__main">
+
+        <!-- ==== HEADER ===== -->
         <header class="header">
             <nav class="nav">
-                <h1 class="nav__logo"></h1>
+                <h1 class="nav__logo">FASCO</h1>
+                <div class="nav__collect">
+                    <li class="nav__item">Home</li>
+                    <li class="nav__item">Deals</li>
+                    <li class="nav__item">New Arrivals</li>
+                    <li class="nav__item">Packages</li>
+                    <li class="nav__item">Sign in</li>
+                    <button class="nav__signupbtn">Sign Up</button>
+                </div>
+                <i class="ri-menu-3-fill" id="bars"></i>
             </nav>
         </header>
+        <div class="menu" id="menu">
+            <div class="menu__top">
+                <div class="menu__header">
+                    <h1 class="menu__logo">FASCO</h1>
+                    <i class="ri-close-fill" id="nav__cancel"></i>
+                </div>
+                <div class="menu__body">
+                    <ul class="menu__collect">
+                        <div class="menu__item">Home</div>
+                        <li class="menu__item">Deals</li>
+                        <li class="menu__item">New Arrivals</li>
+                        <li class="menu__item">Packages</li>
+                        <li class="menu__item">Sign in</li>
+                        <button class="nav__signupbtn">Sign Up</button>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu__footer">
+                <h1 class="menu__auther">Mr.Kadirov</h1>
+                <div class="menu__icons">
+                    <i class="ri-telegram-fill" id="menu__icon"></i>
+                    <i class="ri-facebook-circle-fill" id="menu__icon"></i>
+                    <i class="ri-instagram-fill" id="menu__icon"></i>
+                    <i class="ri-twitter-fill" id="menu__icon"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -32,4 +72,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
