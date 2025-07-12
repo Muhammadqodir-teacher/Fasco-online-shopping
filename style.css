@@ -323,7 +323,7 @@
 .brend__track{
     display: flex;
     gap: 30px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 .brend__track img{
     width: 250px;
@@ -347,3 +347,97 @@
     }
 }
 
+
+
+/* ====== monthly  deals ======= */
+.monthly__deals{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+}
+.monthly__container{
+    width: 90%;
+    display: flex;
+}
+.monthly__title{
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--textColor);
+}
+.monthly__text{
+    max-width: 500px;
+    margin-top: 25px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: var(--textColor);
+}
+.monthly__shopbtn{
+    padding: 20px 60px;
+    border: none;
+    margin-top: 20px;
+    background: var(--btnBAckrund);
+    border-radius: var(--borderRAdius);
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--btnColor);
+    cursor: pointer;
+}
+.monthly__time{
+    margin-top: 10%;
+    max-width: 400px;
+}
+.monthly__time__title{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--textColor);
+}
+.monthly__time__data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.monthly__time__data{
+    margin-top: 20px;
+}
+.monthly__time__box{
+    padding: 20px 20px;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRAdius);
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--textColor);
+    cursor: pointer;
+}
+.monthly__time__boxText{
+    margin-top: 15px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--textColor);
+}
