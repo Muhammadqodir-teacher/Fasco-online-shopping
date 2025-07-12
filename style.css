@@ -75,7 +75,7 @@
 .menu{
     width: 250px;
     height: 100%;
-    background: orange;
+    background: #ffa500;
     position: fixed;
     top: 0;
     right: -250px;
@@ -158,6 +158,31 @@
     .nav__collect{
         display: none;
     }
+    .nav__signupbtn{
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    .menu__auther{
+        font-size: 14px;
+    }
+    #menu__icon{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:540px){
+    .nav__logo{
+        font-size: 26px;
+    }
+    .menu{
+        padding: 20px;
+    }
+    .menu__logo{
+        font-size: 26px;        
+    }
+    .menu__item{
+        font-size: 14px;
+    }
 }
 
 /* ======= hero ============ */
@@ -166,6 +191,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2%;
 }
 .home__container{
     width: 90%;
@@ -182,7 +208,8 @@
 }
 .hero__col__img{
     max-width: 100%;
-    margin-top: 35%;
+    height: 80%;
+    object-fit: cover;
 }
 .hero__col__two{
     display: flex;
@@ -241,7 +268,7 @@
     color: var(--textColor);
 }
 .col__body__btn{
-    padding: 20px 40px;
+    padding: 20px 50px;
     background: var(--btnBAckrund);
     border: none;
     border-radius: var(--borderRAdius);
@@ -264,9 +291,59 @@
 
 @media only screen and (max-width:900px){
     .home__container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .hero__col__two{
         order: -1;
+        grid-column: 1 /span 2;
+    }
+    .col__body__subtext{
+        font-size: 18px;
+    }
+    .col__body__btn{
+        padding: 15px 30px;
+        font-size: 12px;
     }
 }
+
+@media only screen and (max-width:400px){
+    .col__body__text{
+        font-size: 60px;
+    }
+    .col__body__sale{
+        font-size: 130px;
+    }
+}
+/* ===== brend ========== */
+.brend{
+    overflow: hidden;
+    padding: 25px 0;
+    margin-top: 2%;
+}
+.brend__track{
+    display: flex;
+    gap: 30px;
+    animation: scroll 30s linear infinite;
+}
+.brend__track img{
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: all 0.3s;
+}
+.brend__track img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
