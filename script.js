@@ -112,5 +112,3 @@ minusBtn.addEventListener('click', () => {
         number.textContent = count;
     }
 });
-  
-
