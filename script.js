@@ -112,3 +112,19 @@ minusBtn.addEventListener('click', () => {
         number.textContent = count;
     }
 });
+
+
+const shopCardBtn = document.querySelector(".products__quantity__item");
+const shopCardContainer = document.querySelector(".shopping__container");
+const shopCardClose = document.getElementById("shopping--close");
+const shopCard = document.querySelector(".shopping__card");
+
+shopCardBtn.addEventListener('click' , () =>{
+    shopCard.style.right = "0px"
+    shopCardContainer.style.display = "block"
+});
+
+shopCardClose.addEventListener('click' , () =>{
+    shopCard.style.right = "-600px"
+    shopCardContainer.style.display = "none"
+});
