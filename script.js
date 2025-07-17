@@ -119,12 +119,60 @@ const shopCardContainer = document.querySelector(".shopping__container");
 const shopCardClose = document.getElementById("shopping--close");
 const shopCard = document.querySelector(".shopping__card");
 
-shopCardBtn.addEventListener('click' , () =>{
+shopCardBtn.addEventListener('click', () => {
     shopCard.style.right = "0px"
     shopCardContainer.style.display = "block"
 });
 
-shopCardClose.addEventListener('click' , () =>{
+shopCardClose.addEventListener('click', () => {
     shopCard.style.right = "-600px"
     shopCardContainer.style.display = "none"
 });
+
+
+
+
+
+
+
+const instaSlider = document.getElementById("followUS__container");
+
+for (let i = 0; i < 3; i++) {
+    instaSlider.innerHTML += instaSlider.innerHTML;
+}
+
+let scrollAmout = 0;
+const sped = 1;
+
+function autoScroll() {
+    scrollAmout += sped;
+    instaSlider.scrollLeft = scrollAmout;
+
+
+    if (scrollAmout >= instaSlider.scrollWidth / 2) {
+        scrollAmout = 0;
+    }
+
+    requestAnimationFrame(autoScroll);
+}
+autoScroll();
+
+
+
+
+let slideIndex = 0;
+
+function currentSlide(dir) {
+    const slides = document.querySelectorAll(".customer__slide");
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    slideIndex += dir;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+
+    slides[slideIndex].classList.add("active");
+
+}
