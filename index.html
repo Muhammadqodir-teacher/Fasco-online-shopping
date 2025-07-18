@@ -37,16 +37,17 @@
             <nav class="nav">
                 <h1 class="nav__logo">FASCO</h1>
                 <div class="nav__collect">
-                    <li class="nav__item">Home</li>
-                    <li class="nav__item">Shop</li>
-                    <li class="nav__item">Products</li>
-                    <li class="nav__item">Pages</li>
-                    <li class="nav__item">Sign in</li>
-                    <button class="nav__signupbtn">Sign Up</button>
+                    <li class="nav__item activePage" data-switcher2 data-tab="1">Home</li>
+                    <li class="nav__item" data-switcher2 data-tab="2">Shop</li>
+                    <li class="nav__item" data-switcher2 data-tab="3">Products</li>
+                    <li class="nav__item" data-switcher2 data-tab="4">Pages</li>
+                    <li class="nav__item" data-switcher2 data-tab="5">Sign in</li>
+                    <button class="nav__signupbtn" data-switcher2 data-tab="6">Sign Up</button>
                 </div>
                 <i class="ri-menu-3-fill" id="bars"></i>
             </nav>
         </header>
+
         <div class="menu" id="menu">
             <div class="menu__top">
                 <div class="menu__header">
@@ -75,776 +76,1318 @@
             </div>
         </div>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero">
-            <div class="home__container">
-                <div class="hero__col">
-                    <img class="hero__col__img" src="./images/hero-col-img-1.png" alt="img">
-                </div>
-                <div class="hero__col__two">
-                    <div class="hero__col__header">
-                        <img src="./images/col__header__img.png" alt="img" class="col__header__img">
+        <!-- ========================== home page ===================== -->
+        <div class="home page activePage" data-page2="1">
+            <!-- ===== HERO ===== -->
+            <section class="hero">
+                <div class="home__container">
+                    <div class="hero__col">
+                        <img class="hero__col__img" src="./images/hero-col-img-1.png" alt="img">
                     </div>
-                    <div class="hero__col__body">
-                        <h1 class="col__body__text">ULTIMATE</h1>
-                        <h1 class="col__body__sale">SALE</h1>
-                        <p class="col__body__subtext">NEW COLLECTION</p>
-                        <button class="col__body__btn">SHOP NOW</button>
+                    <div class="hero__col__two">
+                        <div class="hero__col__header">
+                            <img src="./images/col__header__img.png" alt="img" class="col__header__img">
+                        </div>
+                        <div class="hero__col__body">
+                            <h1 class="col__body__text">ULTIMATE</h1>
+                            <h1 class="col__body__sale">SALE</h1>
+                            <p class="col__body__subtext">NEW COLLECTION</p>
+                            <button class="col__body__btn">SHOP NOW</button>
+                        </div>
+                        <div class="hero__col__footer">
+                            <img src="./images/col__footer__img.png" alt="img" class="col__footer__img">
+                        </div>
                     </div>
-                    <div class="hero__col__footer">
-                        <img src="./images/col__footer__img.png" alt="img" class="col__footer__img">
+                    <div class="hero__col">
+                        <img class="hero__col__img" src="./images/hero-col-img-3.png" alt="img">
                     </div>
                 </div>
-                <div class="hero__col">
-                    <img class="hero__col__img" src="./images/hero-col-img-3.png" alt="img">
+            </section>
+
+            <!-- ===== BREND ==== -->
+            <section class="brend">
+                <div class="brend__track">
+                    <img src="./images/brend-img-1.png" alt="img">
+                    <img src="./images/brend-img-2.png" alt="img">
+                    <img src="./images/brend-img-3.png" alt="img">
+                    <img src="./images/brend-img-4.png" alt="img">
+                    <img src="./images/brend-img-5.png" alt="img">
+
+
+                    <img src="./images/brend-img-1.png" alt="img">
+                    <img src="./images/brend-img-2.png" alt="img">
+                    <img src="./images/brend-img-3.png" alt="img">
+                    <img src="./images/brend-img-4.png" alt="img">
+                    <img src="./images/brend-img-5.png" alt="img">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ===== BREND ==== -->
-        <section class="brend">
-            <div class="brend__track">
-                <img src="./images/brend-img-1.png" alt="img">
-                <img src="./images/brend-img-2.png" alt="img">
-                <img src="./images/brend-img-3.png" alt="img">
-                <img src="./images/brend-img-4.png" alt="img">
-                <img src="./images/brend-img-5.png" alt="img">
+            <!-- ===== MONTHLY DEALS === -->
+            <section class="monthly__deals">
+                <div class="monthly__container">
+                    <div class="monthly__data">
+                        <h1 class="monthly__title">Deals Of The Month</h1>
+                        <p class="monthly__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+                            duis
+                            ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
+                        </p>
+                        <button class="monthly__shopbtn">Buy Now</button>
+
+                        <div class="monthly__time">
+                            <p class="monthly__time__title">Hurry, Before It’s Too Late!</p>
+                            <div class="monthly__time__data">
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="day"></div>
+                                    <p class="monthly__time__boxText">Days</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="hours"></div>
+                                    <p class="monthly__time__boxText">Hr</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="minut"></div>
+                                    <p class="monthly__time__boxText">Mins</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="second"></div>
+                                    <p class="monthly__time__boxText">Sec</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly__carusel">
+                        <div class="monthly__carusel__control">
+                            <button class="prevBtn"><i class="ri-arrow-left-wide-fill"></i></button>
+                            <button class="nextBtn"><i class="ri-arrow-right-wide-fill"></i></button>
+                        </div>
+                        <div class="cmonthly__carusel__flex">
+
+                            <div class="monthly__carusel__container">
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-1.png" alt="img">
+                                    <div class="slide__box">
+                                        <span class="slide__box__num">01 <span></span> Spring Sale</span>
+                                        <p class="slide__box__text">30% OFF</p>
+                                    </div>
+                                </div>
+
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-2.png" alt="img">
+
+                                </div>
+
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-2.png" alt="img">
+                                </div>
+                            </div>
+
+                            <div class="dot__group" style="text-align: start;">
+                                <span class="dot active">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-                <img src="./images/brend-img-1.png" alt="img">
-                <img src="./images/brend-img-2.png" alt="img">
-                <img src="./images/brend-img-3.png" alt="img">
-                <img src="./images/brend-img-4.png" alt="img">
-                <img src="./images/brend-img-5.png" alt="img">
-            </div>
-        </section>
 
-        <!-- ===== MONTHLY DEALS === -->
-        <section class="monthly__deals">
-            <div class="monthly__container">
-                <div class="monthly__data">
-                    <h1 class="monthly__title">Deals Of The Month</h1>
-                    <p class="monthly__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
-                        duis
+            <!-- ===== Arrivals ======== -->
+            <section class="arrivals">
+                <div class="arrivals__container">
+                    <h1 class="arrivals__title">New Arrivals</h1>
+                    <p class="arrivals__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
                         ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
                     </p>
-                    <button class="monthly__shopbtn">Buy Now</button>
+                    <div class="arrivals__nav">
+                        <button class="arrivals__navBtn">Men’s Fashion</button>
+                        <button class="arrivals__navBtn active">Women’s Fashion</button>
+                        <button class="arrivals__navBtn">Women Accessories</button>
+                        <button class="arrivals__navBtn">Men Accessories</button>
+                        <button class="arrivals__navBtn">Discount Deals</button>
+                    </div>
+                    <div class="arrivals__collect">
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-1.png" alt="">
+                            </div>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>Shiny Dress</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
 
-                    <div class="monthly__time">
-                        <p class="monthly__time__title">Hurry, Before It’s Too Late!</p>
-                        <div class="monthly__time__data">
-                            <div class="monthly__time__dataItem">
-                                <div class="monthly__time__box" id="day"></div>
-                                <p class="monthly__time__boxText">Days</p>
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
                             </div>
-                            <div class="monthly__time__dataItem">
-                                <div class="monthly__time__box" id="hours"></div>
-                                <p class="monthly__time__boxText">Hr</p>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
                             </div>
-                            <div class="monthly__time__dataItem">
-                                <div class="monthly__time__box" id="minut"></div>
-                                <p class="monthly__time__boxText">Mins</p>
+                        </div>
+
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-2.png" alt="">
                             </div>
-                            <div class="monthly__time__dataItem">
-                                <div class="monthly__time__box" id="second"></div>
-                                <p class="monthly__time__boxText">Sec</p>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>Long Dress</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
+
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                            </div>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
+                            </div>
+                        </div>
+
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-3.png" alt="">
+                            </div>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>Full Sweater</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
+
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                            </div>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
+                            </div>
+                        </div>
+
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-4.png" alt="">
+                            </div>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>White Dress</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
+
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                            </div>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
+                            </div>
+                        </div>
+
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-5.png" alt="">
+                            </div>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>Colorful Dress</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
+
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                            </div>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
+                            </div>
+                        </div>
+
+                        <div class="arrivals__collect__card">
+                            <div class="arrivals__card__header">
+                                <img src="./images/arrivals-card-img-6.png" alt="">
+                            </div>
+                            <div class="arrivals__card__body">
+                                <div class="arrivals__card__bodyBox">
+                                    <p>White Shirt</p>
+                                    <div class="arrivals__card__star">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                        <img src="./images/star.svg" alt="img">
+                                    </div>
+                                </div>
+                                <p class="arrivals__card__auther">Al Karam</p>
+
+                                <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                            </div>
+                            <div class="arrivals__card__footer">
+                                <p class="arrivals__card__footerText">$95.50</p>
+                                <p class="arrivals__card__footerSold">Almost Sold Out</p>
                             </div>
                         </div>
                     </div>
+                    <button class="arrivals__viewBtn">View More</button>
                 </div>
-                <div class="monthly__carusel">
-                    <div class="monthly__carusel__control">
-                        <button class="prevBtn"><i class="ri-arrow-left-wide-fill"></i></button>
-                        <button class="nextBtn"><i class="ri-arrow-right-wide-fill"></i></button>
-                    </div>
-                    <div class="cmonthly__carusel__flex">
+            </section>
 
-                        <div class="monthly__carusel__container">
-                            <div class="slide fede">
-                                <img src="./images/monthly-carusel-img-1.png" alt="img">
-                                <div class="slide__box">
-                                    <span class="slide__box__num">01 <span></span> Spring Sale</span>
-                                    <p class="slide__box__text">30% OFF</p>
+            <div class="shopping__container">
+                <div class="shopping__card">
+                    <div class="shopping__header">
+                        <div class="shopping__header__top">
+                            <h1 class="shopping__card__logo">Shopping Cart</h1>
+                            <i class="ri-close-fill" id="shopping--close"></i>
+                        </div>
+                        <p class="shopping__header__text">Buy <b>$122.35 </b>more and get <b>free shipping</b></p>
+                        <div class="shopping__card__box">
+                            <img src="./images/shopping-card-img.png" alt="" class="shopping__card__img">
+                            <div>
+                                <p class="shopping__box__text">Denim Jacket</p>
+                                <p class="shopping__box__subtext">Color : Red</p>
+                                <p class="shopping__box__moneytext">$14.80</p>
+                                <div class="shopping__btn__group">
+                                    <button id="minus">-</button>
+                                    <p id="number">1</p>
+                                    <button id="plus">+</button>
                                 </div>
                             </div>
-
-                            <div class="slide fede">
-                                <img src="./images/monthly-carusel-img-2.png" alt="img">
-
-                            </div>
-
-                            <div class="slide fede">
-                                <img src="./images/monthly-carusel-img-2.png" alt="img">
-                            </div>
-                        </div>
-
-                        <div class="dot__group" style="text-align: start;">
-                            <span class="dot active">
-                                <div></div>
-                            </span>
-                            <span class="dot">
-                                <div></div>
-                            </span>
-                            <span class="dot">
-                                <div></div>
-                            </span>
-                            <span class="dot">
-                                <div></div>
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Products ======== -->
-        <section class="products " data-page="4">
-            <div class="products__container">
-                <div class="products__imges">
-                    <div class="products__img__collect">
-                        <div class="products__item" data-switcher data-tab="1">
-                            <img src="./images/packages-img-collect-1.png" alt="img">
-                        </div>
-                        <div class="products__item imgActive" data-switcher data-tab="2">
-                            <img src="./images/packages-img-collect-2.png" alt="img">
-                        </div>
-                        <div class="products__item" data-switcher data-tab="3">
-                            <img src="./images/packages-img-collect-3.png" alt="img">
-                        </div>
-                        <div class="products__item" data-switcher data-tab="4">
-                            <img src="./images/packages-img-collect-4.png" alt="img">
-                        </div>
-                        <div class="products__item" data-switcher data-tab="5">
-                            <img src="./images/packages-img-collect-5.png" alt="img">
-                        </div>
-                        <div class="products__item" data-switcher data-tab="6">
-                            <img src="./images/packages-img-collect-6.png" alt="img">
-                        </div>
-                        <div class="products__item" data-switcher data-tab="7">
-                            <img src="./images/packages-img-collect-7.png" alt="img">
                         </div>
                     </div>
-                    <div class="products__img__main">
-                        <img class="page" data-page="1" src="./images/products__img-1.png" alt="img">
-                        <img class="page imgActive" data-page="2" src="./images/products__img-2.png" alt="img">
-                        <img class="page" data-page="3" src="./images/products__img-3.png" alt="img">
-                        <img class="page" data-page="4" src="./images/products__img-4.png" alt="img">
-                        <img class="page" data-page="5" src="./images/products__img-5.png" alt="img">
-                        <img class="page" data-page="6" src="./images/products__img-6.png" alt="img">
-                        <img class="page" data-page="7" src="./images/products__img-7.png" alt="img">
-                    </div>
-                </div>
-                <div class="products__data">
-                    <div class="products__data__logo">Fasco</div>
-                    <div class="products__evaluate">
-                        <h1 class="products__evaluate__text">Denim Jacket</h1>
-                        <div class="products__evaluate__star">
-                            <i class="ri-star-line"></i>
-                        </div>
-                    </div>
-                    <div class="productss__star">
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-line"></i>
-                        <p class="products__star__number">(3)</p>
-                    </div>
-                    <div class="products__money">
-                        <p class="products__money__text">$39.00</p>
-                        <p class="products__money__subtext">$59.00</p>
-                        <button class="products__money__btn">Save <span>33%</span></button>
-                    </div>
-                    <div class="products__view">
-                        <i class="ri-eye-line"></i>
-                        <p class="products__view__text">24 people are viewing this right now</p>
-                    </div>
-                    <div class="products__discount">
-                        <p class="products__discount__text">Hurry up! Sale ends in:</p>
-                        <p class="products__discount__time"></p>
-                    </div>
-                    <div class="products__stock">
-                        <div class="products__stock__text">Only 9 item(s) left in stock!</div>
-                        <div class="products__stock__item">
-                            <div class="products__stock__itemBox"></div>
-                        </div>
-                    </div>
-                    <div class="products__sizing">
-                        <p class="products__sizing__text">Size: M</p>
-
-                        <div class="products__sizing__main">
-                            <button class="products__sizing__btn active">M</button>
-                            <button class="products__sizing__btn">L</button>
-                            <button class="products__sizing__btn">XL</button>
-                            <button class="products__sizing__btn">XXL</button>
-                        </div>
-                    </div>
-                    <div class="products__colors">
-                        <p class="products__color__text">Color: Blue</p>
-
-                        <div class="products__colors__main">
-                            <button class="products__colors__box active" data-color="blue"></button>
-                            <button class="products__colors__box" data-color="black"></button>
-                            <button class="products__colors__box" data-color="pink"></button>
-                        </div>
-                    </div>
-                    <div class="products__quantity">
-                        <p class="products__quantity__text">Quantity</p>
-
-                        <div class="products__quantity__main">
-                            <div class="products__quantity__box">
-                                <button id="minus">-</button>
-                                <p id="number">1</p>
-                                <button id="plus">+</button>
-                            </div>
-                            <button class="products__quantity__item">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="products__tools">
-                        <div class="products__tools__item">
-                            <i class="ri-arrow-up-down-line"></i>
-                            <p>Compare</p>
-
-                        </div>
-                        <div class="products__tools__item">
-                            <i class="ri-question-line"></i>
-                            <p>Ask a question</p>
-                        </div>
-                        <div class="products__tools__item">
-                            <i class="ri-stackshare-line"></i>
-                            <p>Share</p>
-                        </div>
-                    </div>
-                    <div class="products__info">
-                        <div class="products__info__item">
-                            <img src="./images/produckts-delivery.png" alt="icon">
-                            <p>Estimated Delivery:</p>
-                            <span>Jul 30 - Aug 03</span>
-                        </div>
-                        <div class="products__info__item">
-                            <img src="./images/produckts-free-shopping.png" alt="icon">
-                            <p>Free Shipping & Returns:</p>
-                            <span>On all orders over $75</span>
-                        </div>
-                    </div>
-                    <div class="products__company">
-                        <img src="./images/products-company-img.png" alt="img">
-                        <p class="products__company__text">Guarantee safe & secure checkout</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Arrivals ======== -->
-        <section class="arrivals">
-            <div class="arrivals__container">
-                <h1 class="arrivals__title">New Arrivals</h1>
-                <p class="arrivals__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
-                    ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
-                </p>
-                <div class="arrivals__nav">
-                    <button class="arrivals__navBtn">Men’s Fashion</button>
-                    <button class="arrivals__navBtn active">Women’s Fashion</button>
-                    <button class="arrivals__navBtn">Women Accessories</button>
-                    <button class="arrivals__navBtn">Men Accessories</button>
-                    <button class="arrivals__navBtn">Discount Deals</button>
-                </div>
-                <div class="arrivals__collect">
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-1.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>Shiny Dress</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-2.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>Long Dress</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-3.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>Full Sweater</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-4.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>White Dress</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-5.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>Colorful Dress</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-
-                    <div class="arrivals__collect__card">
-                        <div class="arrivals__card__header">
-                            <img src="./images/arrivals-card-img-6.png" alt="">
-                        </div>
-                        <div class="arrivals__card__body">
-                            <div class="arrivals__card__bodyBox">
-                                <p>White Shirt</p>
-                                <div class="arrivals__card__star">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                    <img src="./images/star.svg" alt="img">
-                                </div>
-                            </div>
-                            <p class="arrivals__card__auther">Al Karam</p>
-
-                            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
-                        </div>
-                        <div class="arrivals__card__footer">
-                            <p class="arrivals__card__footerText">$95.50</p>
-                            <p class="arrivals__card__footerSold">Almost Sold Out</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="arrivals__viewBtn">View More</button>
-            </div>
-        </section>
-
-        <div class="shopping__container">
-            <div class="shopping__card">
-                <div class="shopping__header">
-                    <div class="shopping__header__top">
-                        <h1 class="shopping__card__logo">Shopping Cart</h1>
-                        <i class="ri-close-fill" id="shopping--close"></i>
-                    </div>
-                    <p class="shopping__header__text">Buy <b>$122.35 </b>more and get <b>free shipping</b></p>
-                    <div class="shopping__card__box">
-                        <img src="./images/shopping-card-img.png" alt="" class="shopping__card__img">
+                    <div class="shopping__body">
                         <div>
-                            <p class="shopping__box__text">Denim Jacket</p>
-                            <p class="shopping__box__subtext">Color : Red</p>
-                            <p class="shopping__box__moneytext">$14.80</p>
-                            <div class="shopping__btn__group">
-                                <button id="minus">-</button>
-                                <p id="number">1</p>
-                                <button id="plus">+</button>
-                            </div>
+                            <input type="checkbox" class="shopping__checkbox">
+                        </div>
+                        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
+                    </div>
+                    <div class="shopping__footer">
+                        <div class="shopping__footer__top">
+                            <p>Subtotal</p>
+                            <p>$100.00</p>
+                        </div>
+                        <button class="shopping__checkoutbtn">Checkout</button>
+                        <a href="#" class="shopping__href">View Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Women Collection ==== -->
+            <section class="Women__collection">
+                <div class="women__img">
+                    <img src="./images/woman-img.png" alt="">
+                </div>
+                <div class="women__data">
+                    <p class="woman__subtitle">Women Collection</p>
+                    <h1 class="women__title">Peaky Blinders</h1>
+                    <p class="women__discription">DESCRIPTION</p>
+
+                    <p class="women__textInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                        ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Scelerisque duis.
+                    </p>
+                    <div class="women__size">
+                        <p class="women__sizeText">Size:</p>
+                        <button class="women__SizeBtn">M</button>
+                    </div>
+                    <h3 class="women__money">$100.00</h3>
+                    <button class="women__shopBtn">Buy Now</button>
+                </div>
+            </section>
+
+            <!-- ===== advantages__section ===== -->
+            <section class="advantages">
+                <div class="adventages__container">
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-1.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-2.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-3.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-4.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
                         </div>
                     </div>
                 </div>
-                <div class="shopping__body">
-                    <div>
-                        <input type="checkbox" class="shopping__checkbox">
-                    </div>
-                    <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
-                </div>
-                <div class="shopping__footer">
-                    <div class="shopping__footer__top">
-                        <p>Subtotal</p>
-                        <p>$100.00</p>
-                    </div>
-                    <button class="shopping__checkoutbtn">Checkout</button>
-                    <a href="#" class="shopping__href">View Cart</a>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- ===== Women Collection ==== -->
-        <section class="Women__collection">
-            <div class="women__img">
-                <img src="./images/woman-img.png" alt="">
-            </div>
-            <div class="women__data">
-                <p class="woman__subtitle">Women Collection</p>
-                <h1 class="women__title">Peaky Blinders</h1>
-                <p class="women__discription">DESCRIPTION</p>
-
-                <p class="women__textInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
-                    ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit
-                    amet, consectetur adipiscing elit. Scelerisque duis.
+            <!-- ======= follow us ======== -->
+            <section class="followUs">
+                <h1 class="followUS__title">Follow Us On Instagram</h1>
+                <p class="followUs__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                    ultrices
+                    sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
                 </p>
-                <div class="women__size">
-                    <p class="women__sizeText">Size:</p>
-                    <button class="women__SizeBtn">M</button>
+                <div class="followUS__container" id="followUS__container">
+                    <img src="./images/followus-img-1.png" alt="Image 2">
+                    <img src="./images/followus-img-2.png" alt="Image 1">
+                    <img src="./images/followus-img-3.png" alt="Image 3">
+                    <img src="./images/followus-img-4.png" alt="Image 4">
+                    <img src="./images/followus-img-5.png" alt="Image 5">
+                    <img src="./images/followus-img-6.png" alt="Image 6">
+                    <img src="./images/followus-img-7.png" alt="Image 7">
                 </div>
-                <h3 class="women__money">$100.00</h3>
-                <button class="women__shopBtn">Buy Now</button>
-            </div>
-        </section>
+            </section>
 
-        <!-- ===== advantages__section ===== -->
-        <section class="advantages">
-            <div class="adventages__container">
-                <div class="advantages__box">
-                    <img src="./images/advantages-icon-1.svg" alt="icon">
-                    <div class="advantages__box__item">
-                        <h3>High Quality</h3>
-                        <p>crafted from top materials</p>
-                    </div>
-                </div>
+            <!-- ======== customer ======== -->
+            <section class="customer container">
+                <div class="customer__container">
+                    <h1 class="customer__title">This Is What Our Customers Say</h1>
+                    <p class="customer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                    </p>
 
-                <div class="advantages__box">
-                    <img src="./images/advantages-icon-2.svg" alt="icon">
-                    <div class="advantages__box__item">
-                        <h3>High Quality</h3>
-                        <p>crafted from top materials</p>
-                    </div>
-                </div>
-
-                <div class="advantages__box">
-                    <img src="./images/advantages-icon-3.svg" alt="icon">
-                    <div class="advantages__box__item">
-                        <h3>High Quality</h3>
-                        <p>crafted from top materials</p>
-                    </div>
-                </div>
-
-                <div class="advantages__box">
-                    <img src="./images/advantages-icon-4.svg" alt="icon">
-                    <div class="advantages__box__item">
-                        <h3>High Quality</h3>
-                        <p>crafted from top materials</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= follow us ======== -->
-        <section class="followUs">
-            <h1 class="followUS__title">Follow Us On Instagram</h1>
-            <p class="followUs__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices
-                sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
-            </p>
-            <div class="followUS__container" id="followUS__container">
-                <img src="./images/followus-img-1.png" alt="Image 2">
-                <img src="./images/followus-img-2.png" alt="Image 1">
-                <img src="./images/followus-img-3.png" alt="Image 3">
-                <img src="./images/followus-img-4.png" alt="Image 4">
-                <img src="./images/followus-img-5.png" alt="Image 5">
-                <img src="./images/followus-img-6.png" alt="Image 6">
-                <img src="./images/followus-img-7.png" alt="Image 7">
-            </div>
-        </section>
-
-        <!-- ======== customer ======== -->
-        <section class="customer container">
-            <div class="customer__container">
-                <h1 class="customer__title">This Is What Our Customers Say</h1>
-                <p class="customer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis</p>
-
-                <div class="customer__carusel">
-                    <div class="customer__slide ">
-                        <div class="cutomer__slide__img">
-                            <img src="./images/customer-img-1.png" alt="" style="height: 100%;">
-                        </div>
-                        <div class="customer__slide__box">
-                            <p class="customer__slide__text">"You won't regret it. I would like to personally thank you
-                                for your outstanding product.
-                                Absolutely wonderful!"
-                            </p>
-                            <div class="customer__stars">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
+                    <div class="customer__carusel">
+                        <div class="customer__slide ">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="" style="height: 100%;">
                             </div>
-                            <div class="cutomer__slide__footer">
-                                <h1>James K.</h1>
-                                <p>Traveler</p>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="customer__slide active">
-                        <div class="cutomer__slide__img">
-                            <img src="./images/customer-img-1.png" alt="">
-                        </div>
-                        <div class="customer__slide__box">
-                            <p class="customer__slide__text">"You won't regret it. I would like to personally thank you
-                                for your outstanding product.
-                                Absolutely wonderful!"
-                            </p>
-                            <div class="customer__stars">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
+                        <div class="customer__slide active">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="">
                             </div>
-                            <div class="cutomer__slide__footer">
-                                <h1>James K.</h1>
-                                <p>Traveler</p>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customer__slide">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="">
+                            </div>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="customer__slide">
-                        <div class="cutomer__slide__img">
-                            <img src="./images/customer-img-1.png" alt="">
-                        </div>
-                        <div class="customer__slide__box">
-                            <p class="customer__slide__text">"You won't regret it. I would like to personally thank you
-                                for your outstanding product.
-                                Absolutely wonderful!"
-                            </p>
-                            <div class="customer__stars">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                                <img src="./images/star.svg" alt="">
-                            </div>
-                            <div class="cutomer__slide__footer">
-                                <h1>James K.</h1>
-                                <p>Traveler</p>
-                            </div>
-                        </div>
+                    <div class="customer__carusel__btn">
+                        <button class="customer__prevBtn" id="slidesBtn" onclick="currentSlide(-1)"><i
+                                class="ri-arrow-left-wide-fill"></i></button>
+                        <button class="customer__nextBtn" id="slidesBtn" onclick="currentSlide(1)"><i
+                                class="ri-arrow-right-wide-fill"></i></button>
                     </div>
                 </div>
+            </section>
 
-                <div class="customer__carusel__btn">
-                    <button class="customer__prevBtn" id="slidesBtn" onclick="currentSlide(-1)"><i
-                            class="ri-arrow-left-wide-fill"></i></button>
-                    <button class="customer__nextBtn" id="slidesBtn" onclick="currentSlide(1)"><i
-                            class="ri-arrow-right-wide-fill"></i></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= subscripe =========-->
-        <section class="subscripe">
-            <div class="subscripe__container">
-                <div class="subscripe__img">
-                    <img src="./images/subscripe-img-1.png" alt="">
-                </div>
-                <div class="subscripe__data">
+            <!-- ======= subscripe =========-->
+            <section class="subscripe">
+                <div class="subscripe__container">
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-1.png" alt="">
+                    </div>
+                    <div class="subscripe__data">
                         <h1 class="subscripe__title">Subscribe To Our Newsletter</h1>
                         <p class="subscripe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
                             duis
                             ultrices sollicitudin aliquam sem. Scelerisque duis
                         </p>
                         <input type="text" placeholder="michael@ymail.com" class="subscripe__input">
-                    <button class="subscripe__btn">Subscribe Now</button>
+                        <button class="subscripe__btn">Subscribe Now</button>
+                    </div>
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-2.png" alt="">
+                    </div>
                 </div>
-                <div class="subscripe__img">
-                    <img src="./images/subscripe-img-2.png" alt="">
+            </section>
+
+
+            <!-- ======== footer ========== -->
+            <footer class="footer">
+                <div class="footer__container">
+                    <h1 class="footer__logo">FASCO</h1>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Support Center</a></li>
+                        <li class="footer__item"><a href="#">Invoicing</a></li>
+                        <li class="footer__item"><a href="#">Contract</a></li>
+                        <li class="footer__item"><a href="#">Careers</a></li>
+                        <li class="footer__item"><a href="#">Blog</a></li>
+                        <li class="footer__item"><a href="#">FAQ,s</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-        
+                <p>Copyright © 2025 Xpro . All Rights Reseved.</p>
+            </footer>
+        </div>
 
-        <!-- ======== footer ========== -->
-         <footer class="footer">
-            <div class="footer__container">
-                <h1 class="footer__logo">FASCO</h1>
-                <ul class="footer__list">
-                    <li class="footer__item"><a href="#">Support Center</a></li>
-                    <li class="footer__item"><a href="#">Invoicing</a></li>
-                    <li class="footer__item"><a href="#">Contract</a></li>
-                    <li class="footer__item"><a href="#">Careers</a></li>
-                    <li class="footer__item"><a href="#">Blog</a></li>
-                    <li class="footer__item"><a href="#">FAQ,s</a></li>
-                </ul>
-            </div>
-            <p>Copyright © 2025 Xpro . All Rights Reseved.</p>
-         </footer>
 
-         <!-- ======= shop pages ====== -->
-          <section class="shop">
-            <h1 class="shop__title">Fashion</h1>
-            <p class="shop__text__nav"><Html>Home  >  Fashion</Html></p>
+        <!-- ========================== shop pages ==================== -->
+        <div class="shopping page" data-page2="1">
 
-            <div class="shop__container">
-                <div class="shop__filter">
-                    <h1 class="shop__filter__text">Filters</h1>
+            <section class="shop">
+                <h1 class="shop__title">Fashion</h1>
+                <p class="shop__text__nav">
+                    Home > Fashion
+                </p>
 
-                    <div class="shop__filter__size">
-                        <p class="size__text">Size</p>
-                        <div class="size__btn__group">
-                            <button>S</button>
-                            <button>M</button>
-                            <button>L</button>
-                            <button>XL</button>
+                <div class="shop__container">
+                    <div class="shop__filter">
+                        <h1 class="shop__filter__text">Filters</h1>
+
+                        <div class="shop__filter__size">
+                            <p class="size__text">Size</p>
+                            <div class="size__btn__group">
+                                <button class="size__btn">S</button>
+                                <button class="size__btn">M</button>
+                                <button class="size__btn">L</button>
+                                <button class="size__btn">XL</button>
+                            </div>
                         </div>
+
+                        <div class="shop__filter__color">
+                            <p class="color__text">Colors</p>
+                            <div class="colors__group">
+                                <div style="background: #FF6C6C;"></div>
+                                <div style="background: #FF7629;"></div>
+                                <div style="background: #FFF06C;"></div>
+                                <div style="background: #9BFF6C;"></div>
+                                <div style="background: #6CFF9E;"></div>
+                                <div style="background: #6CFFDC;"></div>
+                                <div style="background: #6CB9FF;"></div>
+                                <div style="background: #6CF6FF;"></div>
+                                <div style="background: #6CA7FF;"></div>
+                                <div style="background: #6C7BFF;"></div>
+                                <div style="background: #8A6CFF;"></div>
+                                <div style="background: #B66CFF;"></div>
+                                <div style="background: #FC6CFF;"></div>
+                                <div style="background: #FF6C6C;"></div>
+                            </div>
+                        </div>
+
+                        <div class="shop__fliter__prices">
+                            <p class="prices__text">Prices</p>
+
+                            <div class="prices__group">
+                                <p>$0-$50</p>
+                                <p>$50-$100</p>
+                                <p>$100-$150</p>
+                                <p>$150-$200</p>
+                                <p>$300-$400</p>
+                            </div>
+                        </div>
+
+                        <div class="shop__filter__brend">
+                            <div class="shop__brend__header">
+                                <p class="brend__title">Brends</p>
+                                <i class="ri-arrow-up-wide-line"></i>
+                            </div>
+
+                            <div class="brends__group">
+                                <p>Minimog</p>
+                                <p>Retrolie</p>
+                                <p>Brook</p>
+                                <p>Learts</p>
+                                <p>Vagabond</p>
+                                <p>Abby</p>
+                            </div>
+                        </div>
+
+                        <div class="shop__filter__collection">
+                            <div class="shop__collection__header">
+                                <p class="collection__text">Collections</p>
+                                <i class="ri-arrow-up-wide-line"></i>
+                            </div>
+
+                            <div class="collections__group">
+                                <p>All products</p>
+                                <p>Best sellers</p>
+                                <p>New arrivals</p>
+                                <p>Accessories</p>
+                            </div>
+                        </div>
+
+                        <div class="shop__filter__teg">
+                            <p class="teg__text">Tegs</p>
+
+                            <div class="teg__group">
+                                <p>Fashion</p>
+                                <p>Hats</p>
+                                <p>Sandal</p>
+                                <p>Belt</p>
+                                <p>Bags</p>
+                                <p>Snacker</p>
+                                <p>Denim</p>
+                                <p>Minimog</p>
+                                <p>Vagabond</p>
+                                <p>Sunglasses</p>
+                                <p>Beachwear</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="shop__filter__color">
-                        <p class="color__text">Colors</p>
-                        <div class="colors__group">
-                            <div style="background: #FF6C6C;"></div>
-                            <div style="background: #FF7629;"></div>
-                            <div style="background: #FFF06C;"></div>
-                            <div style="background: #9BFF6C;"></div>
-                            <div style="background: #6CFF9E;"></div>
-                            <div style="background: #6CFFDC;"></div>
-                            <div style="background: #6CB9FF;"></div>
-                            <div style="background: #6CF6FF;"></div>
-                            <div style="background: #6CA7FF;"></div>
-                            <div style="background: #6C7BFF;"></div>
-                            <div style="background: #8A6CFF;"></div>
-                            <div style="background: #B66CFF;"></div>
-                            <div style="background: #FC6CFF;"></div>
-                            <div style="background: #FF6C6C;"></div>
+                    <div class="shop__selling">
+                        <div class="shop__selling__header">
+                            <h1 class="selling__logo">Best selling</h1>
+                            <div class="selling__header__box">
+                                <button class="selling__hearder__btn"><i class="ri-barcode-line"></i></button>
+                                <button class="selling__hearder__btn"><i class="ri-barcode-line"></i></button>
+                                <button class="selling__hearder__btn"><i class="ri-barcode-line"></i></button>
+                                <button class="selling__hearder__btn"><i class="ri-barcode-line"></i></button>
+                                <button class="selling__hearder__btn"><i class="ri-barcode-line"></i></button>
+                            </div>
                         </div>
-                    </div>
+                        <div class="shop__selling__body">
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
 
-                    <div class="shop__fliter__prices">
-                        <p class="prices__text">Prices</p>
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
 
-                        <div class="prices__group">
-                            <p>$0-$50</p>
-                            <p>$50-$100</p>
-                            <p>$100-$150</p>
-                            <p>$150-$200</p>
-                            <p>$300-$400</p>
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="selling__body__box">
+                                <div class="selling__body__img">
+                                    <img src="./images/shop-page-img-1.png" alt="">
+                                    <div class="selling__img__view">Sold <br> Out</div>
+                                </div>
+                                <p class="selling__box__title">Rounded Red Hat</p>
+                                <p class="selling__box__money">$8.00</p>
+                                <div class="selling__color">
+                                    <button class="selling__color__box active">
+                                        <div style="background: #FFD700;"></div>
+                                    </button>
+                                    <button class="selling__color__box ">
+                                        <div style="background: #000000;"></div>
+                                    </button>
+                                </div>
+                            </div>
+
                         </div>
+
+                        <div class="shop__selling__footer"></div>
                     </div>
-
-                    <div class="shop__filter__brend">
-                        <p class="brend">Brends</p>
-
-                        <div class="brends__group">
-                            <p>Minimog</p>
-                            <p>Retrolie</p>
-                            <p>Brook</p>
-                            <p>Learts</p>
-                            <p>Vagabond</p>
-                            <p>Abby</p>
-                        </div>
-                    </div>
-
-                    <div class="shop__filter__collection">
-                        <p class="collection__text">Collections</p>
-
-                        <div class="collections__group">
-                            <p>All products</p>
-                            <p>Best sellers</p>
-                            <p>New arrivals</p>
-                            <p>Accessories</p>
-                        </div>
-                    </div>
-
-                    <div class="shop__filter__teg">
-                        <p class="teg__text">Tegs</p>
-
-                        <div class="teg__group">
-                            <p>Fashion</p>
-                            <p>Hats</p>
-                            <p>Sandal</p>
-                            <p>Belt</p>
-                            <p>Bags</p>
-                            <p>Snacker</p>
-                            <p>Denim</p>
-                            <p>Minimog</p>
-                            <p>Vagabond</p>
-                            <p>Sunglasses</p>
-                            <p>Beachwear</p>
-                        </div>
-                    </div>
-                    
                 </div>
-            </div>
-          </section>
+            </section>
+
+            <!-- ===== Women Collection ==== -->
+            <section class="Women__collection">
+                <div class="women__img">
+                    <img src="./images/woman-img.png" alt="">
+                </div>
+                <div class="women__data">
+                    <p class="woman__subtitle">Women Collection</p>
+                    <h1 class="women__title">Peaky Blinders</h1>
+                    <p class="women__discription">DESCRIPTION</p>
+
+                    <p class="women__textInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                        ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Scelerisque duis.
+                    </p>
+                    <div class="women__size">
+                        <p class="women__sizeText">Size:</p>
+                        <button class="women__SizeBtn">M</button>
+                    </div>
+                    <h3 class="women__money">$100.00</h3>
+                    <button class="women__shopBtn">Buy Now</button>
+                </div>
+            </section>
+
+            <!-- ===== advantages__section ===== -->
+            <section class="advantages">
+                <div class="adventages__container">
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-1.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-2.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-3.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+
+                    <div class="advantages__box">
+                        <img src="./images/advantages-icon-4.svg" alt="icon">
+                        <div class="advantages__box__item">
+                            <h3>High Quality</h3>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======= follow us ======== -->
+            <section class="followUs">
+                <h1 class="followUS__title">Follow Us On Instagram</h1>
+                <p class="followUs__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                    ultrices
+                    sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
+                </p>
+                <div class="followUS__container" id="followUS__container">
+                    <img src="./images/followus-img-1.png" alt="Image 2">
+                    <img src="./images/followus-img-2.png" alt="Image 1">
+                    <img src="./images/followus-img-3.png" alt="Image 3">
+                    <img src="./images/followus-img-4.png" alt="Image 4">
+                    <img src="./images/followus-img-5.png" alt="Image 5">
+                    <img src="./images/followus-img-6.png" alt="Image 6">
+                    <img src="./images/followus-img-7.png" alt="Image 7">
+                </div>
+            </section>
+
+            <!-- ======== customer ======== -->
+            <section class="customer container">
+                <div class="customer__container">
+                    <h1 class="customer__title">This Is What Our Customers Say</h1>
+                    <p class="customer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                    </p>
+
+                    <div class="customer__carusel">
+                        <div class="customer__slide ">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="" style="height: 100%;">
+                            </div>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customer__slide active">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="">
+                            </div>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customer__slide">
+                            <div class="cutomer__slide__img">
+                                <img src="./images/customer-img-1.png" alt="">
+                            </div>
+                            <div class="customer__slide__box">
+                                <p class="customer__slide__text">"You won't regret it. I would like to personally thank
+                                    you
+                                    for your outstanding product.
+                                    Absolutely wonderful!"
+                                </p>
+                                <div class="customer__stars">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                    <img src="./images/star.svg" alt="">
+                                </div>
+                                <div class="cutomer__slide__footer">
+                                    <h1>James K.</h1>
+                                    <p>Traveler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer__carusel__btn">
+                        <button class="customer__prevBtn" id="slidesBtn" onclick="currentSlide(-1)"><i
+                                class="ri-arrow-left-wide-fill"></i></button>
+                        <button class="customer__nextBtn" id="slidesBtn" onclick="currentSlide(1)"><i
+                                class="ri-arrow-right-wide-fill"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======= subscripe =========-->
+            <section class="subscripe">
+                <div class="subscripe__container">
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-1.png" alt="">
+                    </div>
+                    <div class="subscripe__data">
+                        <h1 class="subscripe__title">Subscribe To Our Newsletter</h1>
+                        <p class="subscripe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+                            duis
+                            ultrices sollicitudin aliquam sem. Scelerisque duis
+                        </p>
+                        <input type="text" placeholder="michael@ymail.com" class="subscripe__input">
+                        <button class="subscripe__btn">Subscribe Now</button>
+                    </div>
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-2.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ======== footer ========== -->
+            <footer class="footer">
+                <div class="footer__container">
+                    <h1 class="footer__logo">FASCO</h1>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Support Center</a></li>
+                        <li class="footer__item"><a href="#">Invoicing</a></li>
+                        <li class="footer__item"><a href="#">Contract</a></li>
+                        <li class="footer__item"><a href="#">Careers</a></li>
+                        <li class="footer__item"><a href="#">Blog</a></li>
+                        <li class="footer__item"><a href="#">FAQ,s</a></li>
+                    </ul>
+                </div>
+                <p>Copyright © 2025 Xpro . All Rights Reseved.</p>
+            </footer>
+        </div>
+
+        <!-- ========================== Products page ================= -->
+        <div class="product page" data-page2="1">
+
+            <section class="products">
+                <div class="products__container">
+                    <div class="products__imges">
+                        <div class="products__img__collect">
+                            <div class="products__item" data-switcher data-tab="1">
+                                <img src="./images/packages-img-collect-1.png" alt="img">
+                            </div>
+                            <div class="products__item imgActive" data-switcher data-tab="2">
+                                <img src="./images/packages-img-collect-2.png" alt="img">
+                            </div>
+                            <div class="products__item" data-switcher data-tab="3">
+                                <img src="./images/packages-img-collect-3.png" alt="img">
+                            </div>
+                            <div class="products__item" data-switcher data-tab="4">
+                                <img src="./images/packages-img-collect-4.png" alt="img">
+                            </div>
+                            <div class="products__item" data-switcher data-tab="5">
+                                <img src="./images/packages-img-collect-5.png" alt="img">
+                            </div>
+                            <div class="products__item" data-switcher data-tab="6">
+                                <img src="./images/packages-img-collect-6.png" alt="img">
+                            </div>
+                            <div class="products__item" data-switcher data-tab="7">
+                                <img src="./images/packages-img-collect-7.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="products__img__main">
+                            <img class="page" data-page="1" src="./images/products__img-1.png" alt="img">
+                            <img class="page imgActive" data-page="2" src="./images/products__img-2.png" alt="img">
+                            <img class="page" data-page="3" src="./images/products__img-3.png" alt="img">
+                            <img class="page" data-page="4" src="./images/products__img-4.png" alt="img">
+                            <img class="page" data-page="5" src="./images/products__img-5.png" alt="img">
+                            <img class="page" data-page="6" src="./images/products__img-6.png" alt="img">
+                            <img class="page" data-page="7" src="./images/products__img-7.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="products__data">
+                        <div class="products__data__logo">Fasco</div>
+                        <div class="products__evaluate">
+                            <h1 class="products__evaluate__text">Denim Jacket</h1>
+                            <div class="products__evaluate__star">
+                                <i class="ri-star-line"></i>
+                            </div>
+                        </div>
+                        <div class="productss__star">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <p class="products__star__number">(3)</p>
+                        </div>
+                        <div class="products__money">
+                            <p class="products__money__text">$39.00</p>
+                            <p class="products__money__subtext">$59.00</p>
+                            <button class="products__money__btn">Save <span>33%</span></button>
+                        </div>
+                        <div class="products__view">
+                            <i class="ri-eye-line"></i>
+                            <p class="products__view__text">24 people are viewing this right now</p>
+                        </div>
+                        <div class="products__discount">
+                            <p class="products__discount__text">Hurry up! Sale ends in:</p>
+                            <p class="products__discount__time"></p>
+                        </div>
+                        <div class="products__stock">
+                            <div class="products__stock__text">Only 9 item(s) left in stock!</div>
+                            <div class="products__stock__item">
+                                <div class="products__stock__itemBox"></div>
+                            </div>
+                        </div>
+                        <div class="products__sizing">
+                            <p class="products__sizing__text">Size: M</p>
+
+                            <div class="products__sizing__main">
+                                <button class="products__sizing__btn active">M</button>
+                                <button class="products__sizing__btn">L</button>
+                                <button class="products__sizing__btn">XL</button>
+                                <button class="products__sizing__btn">XXL</button>
+                            </div>
+                        </div>
+                        <div class="products__colors">
+                            <p class="products__color__text">Color: Blue</p>
+
+                            <div class="products__colors__main">
+                                <button class="products__colors__box active" data-color="blue"></button>
+                                <button class="products__colors__box" data-color="black"></button>
+                                <button class="products__colors__box" data-color="pink"></button>
+                            </div>
+                        </div>
+                        <div class="products__quantity">
+                            <p class="products__quantity__text">Quantity</p>
+
+                            <div class="products__quantity__main">
+                                <div class="products__quantity__box">
+                                    <button id="minus">-</button>
+                                    <p id="number">1</p>
+                                    <button id="plus">+</button>
+                                </div>
+                                <button class="products__quantity__item">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="products__tools">
+                            <div class="products__tools__item">
+                                <i class="ri-arrow-up-down-line"></i>
+                                <p>Compare</p>
+
+                            </div>
+                            <div class="products__tools__item">
+                                <i class="ri-question-line"></i>
+                                <p>Ask a question</p>
+                            </div>
+                            <div class="products__tools__item">
+                                <i class="ri-stackshare-line"></i>
+                                <p>Share</p>
+                            </div>
+                        </div>
+                        <div class="products__info">
+                            <div class="products__info__item">
+                                <img src="./images/produckts-delivery.png" alt="icon">
+                                <p>Estimated Delivery:</p>
+                                <span>Jul 30 - Aug 03</span>
+                            </div>
+                            <div class="products__info__item">
+                                <img src="./images/produckts-free-shopping.png" alt="icon">
+                                <p>Free Shipping & Returns:</p>
+                                <span>On all orders over $75</span>
+                            </div>
+                        </div>
+                        <div class="products__company">
+                            <img src="./images/products-company-img.png" alt="img">
+                            <p class="products__company__text">Guarantee safe & secure checkout</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Women Collection ==== -->
+            <section class="Women__collection">
+                <div class="women__img">
+                    <img src="./images/woman-img.png" alt="">
+                </div>
+                <div class="women__data">
+                    <p class="woman__subtitle">Women Collection</p>
+                    <h1 class="women__title">Peaky Blinders</h1>
+                    <p class="women__discription">DESCRIPTION</p>
+
+                    <p class="women__textInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis
+                        ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin. Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit. Scelerisque duis.
+                    </p>
+                    <div class="women__size">
+                        <p class="women__sizeText">Size:</p>
+                        <button class="women__SizeBtn">M</button>
+                    </div>
+                    <h3 class="women__money">$100.00</h3>
+                    <button class="women__shopBtn">Buy Now</button>
+                </div>
+            </section>
+
+            <!-- ===== MONTHLY DEALS === -->
+            <section class="monthly__deals">
+                <div class="monthly__container">
+                    <div class="monthly__data">
+                        <h1 class="monthly__title">Deals Of The Month</h1>
+                        <p class="monthly__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+                            duis
+                            ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
+                        </p>
+                        <button class="monthly__shopbtn">Buy Now</button>
+
+                        <div class="monthly__time">
+                            <p class="monthly__time__title">Hurry, Before It’s Too Late!</p>
+                            <div class="monthly__time__data">
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="day"></div>
+                                    <p class="monthly__time__boxText">Days</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="hours"></div>
+                                    <p class="monthly__time__boxText">Hr</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="minut"></div>
+                                    <p class="monthly__time__boxText">Mins</p>
+                                </div>
+                                <div class="monthly__time__dataItem">
+                                    <div class="monthly__time__box" id="second"></div>
+                                    <p class="monthly__time__boxText">Sec</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly__carusel">
+                        <div class="monthly__carusel__control">
+                            <button class="prevBtn"><i class="ri-arrow-left-wide-fill"></i></button>
+                            <button class="nextBtn"><i class="ri-arrow-right-wide-fill"></i></button>
+                        </div>
+                        <div class="cmonthly__carusel__flex">
+
+                            <div class="monthly__carusel__container">
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-1.png" alt="img">
+                                    <div class="slide__box">
+                                        <span class="slide__box__num">01 <span></span> Spring Sale</span>
+                                        <p class="slide__box__text">30% OFF</p>
+                                    </div>
+                                </div>
+
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-2.png" alt="img">
+
+                                </div>
+
+                                <div class="slide fede">
+                                    <img src="./images/monthly-carusel-img-2.png" alt="img">
+                                </div>
+                            </div>
+
+                            <div class="dot__group" style="text-align: start;">
+                                <span class="dot active">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                                <span class="dot">
+                                    <div></div>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======= subscripe =========-->
+            <section class="subscripe">
+                <div class="subscripe__container">
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-1.png" alt="">
+                    </div>
+                    <div class="subscripe__data">
+                        <h1 class="subscripe__title">Subscribe To Our Newsletter</h1>
+                        <p class="subscripe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
+                            duis
+                            ultrices sollicitudin aliquam sem. Scelerisque duis
+                        </p>
+                        <input type="text" placeholder="michael@ymail.com" class="subscripe__input">
+                        <button class="subscripe__btn">Subscribe Now</button>
+                    </div>
+                    <div class="subscripe__img">
+                        <img src="./images/subscripe-img-2.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ======== footer ========== -->
+            <footer class="footer">
+                <div class="footer__container">
+                    <h1 class="footer__logo">FASCO</h1>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#">Support Center</a></li>
+                        <li class="footer__item"><a href="#">Invoicing</a></li>
+                        <li class="footer__item"><a href="#">Contract</a></li>
+                        <li class="footer__item"><a href="#">Careers</a></li>
+                        <li class="footer__item"><a href="#">Blog</a></li>
+                        <li class="footer__item"><a href="#">FAQ,s</a></li>
+                    </ul>
+                </div>
+                <p>Copyright © 2025 Xpro . All Rights Reseved.</p>
+            </footer>
+
+        </div>
+
+
     </div>
 
-
-    </div>
 
     <script src="script.js"></script>
 </body>

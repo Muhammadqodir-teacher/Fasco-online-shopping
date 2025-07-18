@@ -13,6 +13,9 @@
     box-sizing: border-box;
 }
 
+
+/* ======== pages =============== */
+
 /* ========= header ========== */
 .header {
     width: 100%;
@@ -53,7 +56,8 @@
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: var(--textColor)
+    color: var(--textColor);
+    cursor: pointer;
 }
 
 .nav__signupbtn {
@@ -656,7 +660,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 10%;
-    display: none;
 }
 
 .products__container {
@@ -1225,6 +1228,7 @@
     top: 0;
     left: 0;
     display: none;
+    z-index: 99;
 }
 
 .shopping__card {
@@ -1980,7 +1984,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 3%;
     gap: 30px;
     flex-wrap: nowrap;
     position: relative;
@@ -2077,7 +2081,7 @@
 }
 
 .customer__carusel__btn {
-    margin-top: 10%;
+    margin-top: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2341,4 +2345,435 @@
     .footer__item a {
         font-size: 10px;
     }
+}
+
+
+
+/* ======== shop page ============ */
+.shop {
+    width: 100%;
+    height: auto;
+}
+
+.shop__title {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 42px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.shop__text__nav {
+    margin-top: 10px;
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.shop__container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop__filter__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.shop__filter__size {
+    margin-top: 20px;
+}
+
+.size__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.size__btn__group {
+    width: 150px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.size__btn {
+    padding: 10px 10px;
+    border: 1px solid #8A8A8A;
+    border-radius: var(--borderRAdius);
+    background: none;
+    cursor: pointer;
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #8A8A8A;
+}
+
+.shop__filter__color {
+    margin-top: 20px;
+}
+
+.color__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.colors__group {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.colors__group div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.shop__fliter__prices {
+    margin-top: 20px;
+}
+
+.prices__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.prices__group {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+}
+
+.prices__group p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #8A8A8A;
+    cursor: pointer;
+}
+
+.shop__filter__brend {
+    margin-top: 20px;
+}
+
+.shop__brend__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brend__title {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.shop__brend__header i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.brends__group {
+    width: 70%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.brends__group p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #8A8A8A;
+    cursor: pointer;
+}
+
+.shop__filter__collection {
+    margin-top: 20px;
+}
+
+.shop__collection__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.shop__collection__header I {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.collections__group {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+}
+
+.collections__group p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #8A8A8A;
+}
+
+.shop__filter__teg {
+    margin-top: 20px;
+}
+
+.teg__text {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.teg__group {
+    width: 10%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.teg__group p {
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #777777;
+    cursor: pointer;
+}
+
+.shop__selling {
+    width: 70%;
+}
+
+.shop__selling__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selling__logo {
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.selling__header__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.selling__hearder__btn {
+    padding: 10px 10px;
+    border: none;
+    background: #F2F2F2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.shop__selling__body {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.selling__body__box {
+    padding: 0 10px;
+}
+
+.selling__body__img {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selling__img__view {
+    width: 54px;
+    height: 54px;
+    background: #B1B1B1;
+    font-family: Jost;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+.selling__body__box:hover .selling__img__view{
+    display: flex;
+    opacity: 1;
+}
+.selling__body__box:hover .selling__body__img{
+    opacity: 0.8;
+}
+
+.selling__body__box div img {
+    width: 100%;
+}
+
+.selling__box__title {
+    padding: 10px 0;
+    font-family: Volkhov;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.selling__box__money {
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.selling__color {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+.selling__color__box {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selling__color__box div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.selling__color__box.active {
+    border: 1px solid #000;
+}
+
+.selling__color__box.active div {
+    width: 20px;
+    height: 20px;
 }
