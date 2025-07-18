@@ -16,13 +16,9 @@
 
 /* ======== pages =============== */
 .page{
-    width: 100%;
     display: none;
 }
 .activePage{
-    display: block;
-}
-.home{
     display: block;
 }
 /* ========= header ========== */
@@ -665,7 +661,6 @@
 .products {
     width: 100%;
     height: auto;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10%;
@@ -707,9 +702,6 @@
     border: none;
 }
 
-.page {
-    display: none;
-}
 
 .products__item {
     padding: 5px;

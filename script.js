@@ -45,18 +45,18 @@ window.onload = () => {
         const page_id = tab_switcher.dataset.tab
 
         tab_switcher.addEventListener('click', () => {
-            document.querySelector(".products__img__collect .products__item.imgActive").classList.remove("imgActive");
-            tab_switcher.classList.add("imgActive");
+            document.querySelector(".nav__collect .nav__item.activePage").classList.remove("activePage");
+            tab_switcher.classList.add("activePage");
             changePage(page_id);
         });
     }
 }
 function changePage(page_id) {
-    const current_page = document.querySelector(".products__img__main .page.imgActive");
-    current_page.classList.remove("imgActive");
+    const current_page = document.querySelector(".pages .page.activePage");
+    current_page.classList.remove("activePage");
 
-    const next_page = document.querySelector(`.products__img__main .page[data-page="${page_id}"]`);
-    next_page.classList.add("imgActive")
+    const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
+    next_page.classList.add("activePage")
 }
 
 
