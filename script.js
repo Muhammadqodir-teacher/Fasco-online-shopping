@@ -15,28 +15,34 @@ const day = document.getElementById("day");
 const hours = document.getElementById("hours");
 const minut = document.getElementById("minut");
 const second = document.getElementById("second");
-
-let data = new Date();
-let dayTime = (data.getDay());
-let hoursTime = (data.getHours());
-let minutTime = (data.getMinutes());
-let secondTime = (data.getSeconds());
-
-day.textContent = `${dayTime}`;
-hours.textContent = `${hoursTime}`;
-minut.textContent = `${minutTime}`;
-second.textContent = `${secondTime}`;
-
-
 const discoundTime = document.querySelector(".products__discount__time");
 
-let localTime = new Date();
-let localDay = (localTime.getDay());
-let localHours = (localTime.getHours());
-let localMinut = (localTime.getMinutes());
-let localSekond = (localTime.getSeconds());
 
-discoundTime.textContent = `${localDay} : ${localHours} : ${localMinut} : ${localSekond}`
+function time() {
+    let data = new Date();
+    let dayTime = (data.getDay());
+    let hoursTime = (data.getHours());
+    let minutTime = (data.getMinutes());
+    let secondTime = (data.getSeconds());
+
+    day.textContent = `${dayTime}`;
+    hours.textContent = `${hoursTime}`;
+    minut.textContent = `${minutTime}`;
+    second.textContent = `${secondTime}`;
+
+    let localTime = new Date();
+    let localDay = (localTime.getDay());
+    let localHours = (localTime.getHours());
+    let localMinut = (localTime.getMinutes());
+    let localSekond = (localTime.getSeconds());
+
+    discoundTime.textContent = `${localDay} : ${localHours} : ${localMinut} : ${localSekond}`
+}
+setInterval(time, 1000)
+
+
+
+
 
 window.onload = () => {
     const tab_switchers = document.querySelectorAll('[data-switcher]');
@@ -45,7 +51,11 @@ window.onload = () => {
         const page_id = tab_switcher.dataset.tab
 
         tab_switcher.addEventListener('click', () => {
-            document.querySelector(".nav__collect .nav__item.activePage").classList.remove("activePage");
+            const currentActive = document.querySelector(".nav__collect .nav__item.activePage");
+            if (currentActive) {
+                currentActive.classList.remove("activePage");
+            }
+
             tab_switcher.classList.add("activePage");
             changePage(page_id);
         });

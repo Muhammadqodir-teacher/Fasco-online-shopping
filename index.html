@@ -42,7 +42,7 @@
                     <li class="nav__item" data-switcher data-tab="3">Products</li>
                     <li class="nav__item" data-switcher data-tab="4">Pages</li>
                     <li class="nav__item" data-switcher data-tab="5">Sign in</li>
-                    <button class="nav__signupbtn" data-switcher data-tab="6">Sign Up</button>
+                    <button class="nav__item nav__signupbtn" data-switcher data-tab="6">Sign Up</button>
                 </div>
                 <i class="ri-menu-3-fill" id="bars"></i>
             </nav>
@@ -56,12 +56,12 @@
                 </div>
                 <div class="menu__body">
                     <ul class="menu__collect">
-                        <div class="menu__item">Home</div>
-                        <li class="menu__item">Shop</li>
-                        <li class="menu__item">Products</li>
-                        <li class="menu__item">Pages</li>
-                        <li class="menu__item">Sign in</li>
-                        <button class="nav__signupbtn">Sign Up</button>
+                        <div class="menu__item nav__item" data-switcher data-tab="1">Home</div>
+                        <li class="menu__item nav__item" data-switcher data-tab="2">Shop</li>
+                        <li class="menu__item nav__item" data-switcher data-tab="3">Products</li>
+                        <li class="menu__item nav__item" data-switcher data-tab="4">Pages</li>
+                        <li class="menu__item nav__item" data-switcher data-tab="5">Sign in</li>
+                        <button class="nav__signupbtn nav__item" data-switcher data-tab="6">Sign Up</button>
                     </ul>
                 </div>
             </div>
@@ -1352,15 +1352,94 @@
             </div>
 
             <div class="pages page" data-page="4">
-                
+
             </div>
 
             <div class="signin page" data-page="5">
-                <!-- Sign in sahifasi -->
+                <section class="signIn">
+                    <div class="sigin__container">
+                        <div class="signin__img">
+                            <img src="./images/signin-img.png" alt="">
+                        </div>
+                        <div class="signin__data">
+                            <h1 class="sigin__logo">FASCO</h1>
+
+                            <div class="signin__box">
+                                <p class="signin__text">Sign In To FASCO</p>
+
+                                <div class="signin__reg">
+                                    <button class="signin__reg__btn">
+                                        <img src="./images/google.svg" alt="" width="20" height="20">
+                                        <p>Sign up with Google</p>
+                                    </button>
+                                    <button class="signin__reg__btn">
+                                        <img src="./images/email.svg" alt="" width="20" height="20">
+                                        <p>Sign up with Email</p>
+                                    </button>
+                                </div>
+                                <h3 class="signin__or">
+                                    <div></div> OR <div></div>
+                                </h3>
+
+                                <div class="signIn__form">
+                                    <input class="emailData" type="email" placeholder="Email">
+                                    <input class="passwordData" type="password" placeholder="Password">
+
+                                    <button class="signin__btn">Sign In</button>
+                                    <button class="registrantion__btn">Register Now</button>
+                                </div>
+
+                                <p class="forget__pasvord" data-switcher data-tab="6">Forget Password?</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <div class="signup page" data-page="6">
-                <!-- Sign up sahifasi -->
+                <section class="signUp">
+                    <div class="signup__container">
+                        <div class="signup__img">
+                            <img src="./images/signup-img.png" alt="">
+                        </div>
+                        <div class="signup__data">
+                            <h1 class="sigin__logo">FASCO</h1>
+                            <div class="signin__box">
+                                <p class="signin__text">Create Account</p>
+
+                                <div class="signup__reg">
+                                    <button class="signin__reg__btn">
+                                        <img src="./images/google.svg" alt="" width="20" height="20">
+                                        <p>Sign up with Google</p>
+                                    </button>
+                                    <button class="signin__reg__btn">
+                                        <img src="./images/email.svg" alt="" width="20" height="20">
+                                        <p>Sign up with Email</p>
+                                    </button>
+                                </div>
+                                <h3 class="signin__or">
+                                    <div></div> OR <div></div>
+                                </h3>
+
+                                <div class="signup__form">
+                                    <input class="signup__input" type="text" placeholder="First Name">
+                                    <input class="signup__input" type="text" placeholder="Last Name ">
+                                    <input class="signup__input" type="email" placeholder="Email Address">
+                                    <input class="signup__input" type="number" placeholder="Phone Number">
+                                    <input class="signup__input" type="password" placeholder="Password">
+                                    <input class="signup__input" type="password" placeholder="Confirm Password">
+                                </div>
+
+                                <div class="signup__btns">
+                                    <button class="signup__btn">Create Account</button>
+                                </div>
+
+                                <p class="account__login">Already have an account? <a href="#">Login</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
