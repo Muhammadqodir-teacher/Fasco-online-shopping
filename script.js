@@ -50,18 +50,6 @@ window.onload = () => {
             changePage(page_id);
         });
     }
-
-    const tab_switchers2 = document.querySelectorAll('[data-switcher2]');
-    for (let i = 0; i < tab_switchers2.length; i++) {
-        const tab_switcher2 = tab_switchers2[i];
-        const page_id2 = tab_switcher2.dataset.tab;
-
-        tab_switcher2.addEventListener('click', () => {
-            document.querySelector(".nav__collect .nav__item.activePage").classList.remove("activePage");
-            tab_switcher2.classList.add("activePage");
-            changeMainPage(page_id2);
-        });
-    }
 }
 function changePage(page_id) {
     const current_page = document.querySelector(".products__img__main .page.imgActive");
@@ -71,20 +59,7 @@ function changePage(page_id) {
     next_page.classList.add("imgActive")
 }
 
-function changeMainPage(page_id2) {
-    function changeMainPage(page_id2) {
-        const current_page = document.querySelector(".body__main .page.activePage");
-        if (current_page) {
-            current_page.classList.remove("activePage");
-        }
 
-        const next_page = document.querySelector(`.body__main .page[data-page2="${page_id2}"]`);
-        if (next_page) {
-            next_page.classList.add("activePage");
-        }
-    }
-
-}
 
 const size = document.querySelector(".products__sizing__text");
 const sizeBtn = document.querySelectorAll(".products__sizing__btn");

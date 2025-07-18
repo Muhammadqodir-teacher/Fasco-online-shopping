@@ -15,7 +15,16 @@
 
 
 /* ======== pages =============== */
-
+.page{
+    width: 100%;
+    display: none;
+}
+.activePage{
+    display: block;
+}
+.home{
+    display: block;
+}
 /* ========= header ========== */
 .header {
     width: 100%;
