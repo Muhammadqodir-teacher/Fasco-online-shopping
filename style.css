@@ -180,12 +180,46 @@
     color: var(--textColor);
 }
 
+.nav__icons {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    display: none;
+}
+
+.nav__icons i {
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu__icons {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+}
+
+.menu__icons i {
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width:850px) {
     #bars {
         display: block;
     }
 
     .nav__collect {
+        display: none;
+    }
+
+    .nav__icons {
         display: none;
     }
 
@@ -199,7 +233,10 @@
     }
 
     #menu__icon {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .menu__footer{
+        flex-direction: column;
     }
 }
 

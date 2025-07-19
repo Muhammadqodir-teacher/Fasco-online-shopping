@@ -43,10 +43,75 @@ function time() {
 setInterval(time, 1000)
 
 
+// ========== sign up  ================
+const firstName = document.getElementById("signinNme");
+const lastName = document.getElementById("signinLastName");
+const email = document.getElementById("signinEmail");
+const telNumber = document.getElementById("signinNumber");
+const password = document.getElementById("signinPasword");
+const confirPassword = document.getElementById("signinConfirPasword");
+const signUpSubmit = document.getElementById("signupBtn");
+const sinupData = document.querySelector(".signup__form .signup__input");
+const navIcons = document.getElementById("nav__icons");
+const signin = document.getElementById("signin");
+const signup = document.getElementById("signup");
+const menuSignin = document.getElementById("menuSignin");
+const menuSignup = document.getElementById("menuSignup");
+const menuIcons = document.getElementById("menuIcons");
+
+signUpSubmit.addEventListener('click', () => {
+
+    const pass = document.getElementById("signinPasword").value;
+    const Confirpass = document.getElementById("signinConfirPasword").value;
+
+    let obj = [
+        {
+            regFirstaName: firstName.value,
+            regLastName: lastName.value,
+            regEmail: email.value,
+            regTel: telNumber.value,
+            regPassword: password.value,
+            regConfigPas: confirPassword.value
+        }
+    ]
+
+    console.log(obj);
+
+
+
+    if (
+        firstName.value === "" ||
+        lastName.value === "" ||
+        email.value === "" ||
+        telNumber.value === "" ||
+        pass === "" ||
+        Confirpass === ""
+    ) {
+        alert("Malumot kiriting !")
+    }
+    else {
+        localStorage.setItem('firsName', obj[0].regFirstaName);
+        localStorage.setItem('lastName', obj[0].regLastName);
+        localStorage.setItem('email', obj[0].regEmail);
+        localStorage.setItem('tel', obj[0].regTel);
+        localStorage.setItem('password', obj[0].regPassword);
+        localStorage.setItem('configPassword', obj[0].regConfigPas);
+        navIcons.style.display = "flex";
+        menuIcons.style.display = "flex";
+        signin.style.display = "none";
+        signup.style.display = "none";
+        menuSignin.style.display = "none";
+        menuSignup.style.display = "none";
+        alert(`Saytga hush kelibsiz  ${lastName.value
+            }  ${firstName.value}`);
+    }
+
+});
+
 
 // ============ data switcher ============
 
-window.onload = () => {
+window.onload = function () {
     const tab_switchers = document.querySelectorAll('[data-switcher]');
     for (let i = 0; i < tab_switchers.length; i++) {
         const tab_switcher = tab_switchers[i];
@@ -71,15 +136,30 @@ window.onload = () => {
         const fashion_id = tab_switcherTwo.dataset.tab;
 
         tab_switcherTwo.addEventListener('click', () => {
-            // 1. Hamma tugmalardan activeFashion ni olib tashla
             tab_switcherTwos.forEach(btn => btn.classList.remove("activeFashion"));
 
-            // 2. Joriy bosilgan tugmaga class qo‘sh
             tab_switcherTwo.classList.add("activeFashion");
 
-            // 3. Tegishli fashion contentni ko‘rsat
             changeFashion(fashion_id);
         });
+    }
+
+
+    // ============== local stroge ================
+    const savedNameF = localStorage.getItem('firsName');
+    const savedNameL = localStorage.getItem('lastName');
+    const savedEmail = localStorage.getItem('email');
+    const savedTel = localStorage.getItem('tel');
+    const savedPassword = localStorage.getItem('password');
+    const savedPasswordC = localStorage.getItem('configPassword');
+
+    if (savedNameF && savedNameL && savedEmail && savedTel && savedPassword && savedPasswordC) {
+        navIcons.style.display = "flex";
+        menuIcons.style.display = "flex";
+        signin.style.display = "none";
+        signup.style.display = "none";
+        menuSignin.style.display = "none";
+        menuSignup.style.display = "none";
     }
 
 }
@@ -223,45 +303,3 @@ function currentSlide(dir) {
 }
 
 
-// ========== sign up  ================
-const firstName = document.getElementById("signinNme");
-const lastName = document.getElementById("signinLastName");
-const email = document.getElementById("signinEmail");
-const telNumber = document.getElementById("signinNumber");
-const password = document.getElementById("signinPasword");
-const confirPassword = document.getElementById("signinConfirPasword");
-const signUpSubmit = document.getElementById("signupBtn");
-const sinupData = document.querySelector(".signup__form .signup__input");
-
-signUpSubmit.addEventListener('click', () => {
-
-    const pass = document.getElementById("signinPasword").value;
-    const Confirpass = document.getElementById("signinConfirPasword").value;
-
-    let obj = {
-        regFirstaName: firstName.value,
-        regLastName: lastName.value,
-        regEmail: email.value,
-        regTel : telNumber.value,
-        regPassword : password.value,
-        regConfigPas: confirPassword.value 
-    }
-
-    if (sinupData.value === "") {
-        alert("Malumot kiriting !")
-    } else if (pass !== Confirpass) {
-        alert("parol bir xil emas")
-    } else {
-        localStorage.setItem('firsName', obj.regFirstaName);
-        localStorage.setItem('lastName', obj.regLastName);
-        localStorage.setItem('email', obj.regEmail);
-        localStorage.setItem('tel', obj.regTel);
-        localStorage.setItem('password', obj.regPassword);
-        localStorage.setItem('configPassword', obj.regConfigPas);
-
-        alert(`Saytga hush kelibsiz  ${lastName.value}  ${firstName.value}`);
-
-        
-    }
-
-});

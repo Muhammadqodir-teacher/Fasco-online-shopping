@@ -41,8 +41,14 @@
                     <li class="nav__item" data-switcher data-tab="2">Shop</li>
                     <li class="nav__item" data-switcher data-tab="3">Products</li>
                     <li class="nav__item" data-switcher data-tab="4">Pages</li>
-                    <li class="nav__item" data-switcher data-tab="5">Sign in</li>
-                    <button class="nav__item nav__signupbtn" data-switcher data-tab="6">Sign Up</button>
+                    <li class="nav__item" id="signin" data-switcher data-tab="5">Sign in</li>
+                    <button class="nav__item nav__signupbtn" id="signup" data-switcher data-tab="6">Sign Up</button>
+                </div>
+                <div class="nav__icons" id="nav__icons">
+                    <i class="ri-search-line"></i>
+                    <i class="ri-user-3-line"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-shopping-bag-line"></i>
                 </div>
                 <i class="ri-menu-3-fill" id="bars"></i>
             </nav>
@@ -60,9 +66,15 @@
                         <li class="menu__item nav__item" data-switcher data-tab="2">Shop</li>
                         <li class="menu__item nav__item" data-switcher data-tab="3">Products</li>
                         <li class="menu__item nav__item" data-switcher data-tab="4">Pages</li>
-                        <li class="menu__item nav__item" data-switcher data-tab="5">Sign in</li>
-                        <button class="nav__signupbtn nav__item" data-switcher data-tab="6">Sign Up</button>
+                        <li class="menu__item nav__item" id="menuSignin" data-switcher data-tab="5">Sign in</li>
+                        <button class="nav__signupbtn nav__item" id="menuSignup" data-switcher data-tab="6">Sign Up</button>
                     </ul>
+                    <div class="menu__icons" id="menuIcons">
+                        <i class="ri-search-line"></i>
+                        <i class="ri-user-3-line"></i>
+                        <i class="ri-star-line"></i>
+                        <i class="ri-shopping-bag-line"></i>
+                    </div>
                 </div>
             </div>
             <div class="menu__footer">
@@ -2042,12 +2054,17 @@
                                 </h3>
 
                                 <div class="signup__form">
-                                    <input class="signup__input" id="signinNme" type="text" placeholder="First Name">
-                                    <input class="signup__input" id="signinLastName" type="text" placeholder="Last Name ">
-                                    <input class="signup__input" id="signinEmail" type="email" placeholder="Email Address">
-                                    <input class="signup__input" id="signinNumber" type="number" placeholder="Phone Number">
-                                    <input class="signup__input" id="signinPasword" type="password" placeholder="Password">
-                                    <input class="signup__input" id="signinConfirPasword" type="password" placeholder="Confirm Password">
+                                    <input class="signup__input" id="signinNme" type="text" placeholder="First Name" required>
+                                    <input class="signup__input" id="signinLastName" type="text"
+                                        placeholder="Last Name " required>
+                                    <input class="signup__input" id="signinEmail" type="email"
+                                        placeholder="Email Address" required>
+                                    <input class="signup__input" id="signinNumber" type="number"
+                                        placeholder="Phone Number" required>
+                                    <input class="signup__input" id="signinPasword" type="password"
+                                        placeholder="Password" required>
+                                    <input class="signup__input" id="signinConfirPasword" type="password"
+                                        placeholder="Confirm Password" required>
                                 </div>
 
                                 <div class="signup__btns">
