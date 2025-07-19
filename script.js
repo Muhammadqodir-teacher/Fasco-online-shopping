@@ -224,9 +224,44 @@ function currentSlide(dir) {
 
 
 // ========== sign up  ================
-const firstName = document.getElementById("signinNme")
-const lastName = document.getElementById("signinLastName")
-const email = document.getElementById("signinEmail")
-const telNumber = document.getElementById("signinNumber")
-const password = document.getElementById("signinPasword")
-const confirPassword = document.getElementById("signinConfirPasword")
+const firstName = document.getElementById("signinNme");
+const lastName = document.getElementById("signinLastName");
+const email = document.getElementById("signinEmail");
+const telNumber = document.getElementById("signinNumber");
+const password = document.getElementById("signinPasword");
+const confirPassword = document.getElementById("signinConfirPasword");
+const signUpSubmit = document.getElementById("signupBtn");
+const sinupData = document.querySelector(".signup__form .signup__input");
+
+signUpSubmit.addEventListener('click', () => {
+
+    const pass = document.getElementById("signinPasword").value;
+    const Confirpass = document.getElementById("signinConfirPasword").value;
+
+    let obj = {
+        regFirstaName: firstName.value,
+        regLastName: lastName.value,
+        regEmail: email.value,
+        regTel : telNumber.value,
+        regPassword : password.value,
+        regConfigPas: confirPassword.value 
+    }
+
+    if (sinupData.value === "") {
+        alert("Malumot kiriting !")
+    } else if (pass !== Confirpass) {
+        alert("parol bir xil emas")
+    } else {
+        localStorage.setItem('firsName', obj.regFirstaName);
+        localStorage.setItem('lastName', obj.regLastName);
+        localStorage.setItem('email', obj.regEmail);
+        localStorage.setItem('tel', obj.regTel);
+        localStorage.setItem('password', obj.regPassword);
+        localStorage.setItem('configPassword', obj.regConfigPas);
+
+        alert(`Saytga hush kelibsiz  ${lastName.value}  ${firstName.value}`);
+
+        
+    }
+
+});
