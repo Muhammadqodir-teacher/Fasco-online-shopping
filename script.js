@@ -51,7 +51,6 @@ const telNumber = document.getElementById("signinNumber");
 const password = document.getElementById("signinPasword");
 const confirPassword = document.getElementById("signinConfirPasword");
 const signUpSubmit = document.getElementById("signupBtn");
-const sinupData = document.querySelector(".signup__form .signup__input");
 const navIcons = document.getElementById("nav__icons");
 const signin = document.getElementById("signin");
 const signup = document.getElementById("signup");
@@ -88,8 +87,7 @@ signUpSubmit.addEventListener('click', () => {
         Confirpass === ""
     ) {
         alert("Malumot kiriting !")
-    }
-    else {
+    } else {
         localStorage.setItem('firsName', obj[0].regFirstaName);
         localStorage.setItem('lastName', obj[0].regLastName);
         localStorage.setItem('email', obj[0].regEmail);
@@ -102,9 +100,16 @@ signUpSubmit.addEventListener('click', () => {
         signup.style.display = "none";
         menuSignin.style.display = "none";
         menuSignup.style.display = "none";
-        alert(`Saytga hush kelibsiz  ${lastName.value
+
+
+
+        document.querySelectorAll(".signup__input").forEach(input => {
+            input.value = " ";
+        });
+        alert(`Saytga hush kelibsiz ! ${lastName.value
             }  ${firstName.value}`);
     }
+
 
 });
 
