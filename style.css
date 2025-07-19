@@ -1529,16 +1529,21 @@
     cursor: pointer;
 }
 
-.arrivals__nav .active {
+.arrivals__nav .activeFashion {
     background: #000;
     color: #FFFFFF;
 }
 
-.arrivals__collect {
+.fashion {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     margin-top: 5%;
+    display: none;
+}
+
+.activeFashion {
+    display: grid;
 }
 
 .arrivals__collect__card {
@@ -1659,7 +1664,7 @@
 
     }
 
-    .arrivals__collect {
+    .fashion {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1680,7 +1685,7 @@
 }
 
 @media only screen and (max-width:647px) {
-    .arrivals__collect {
+    .fashion {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -2395,6 +2400,7 @@
     text-align: center;
     vertical-align: middle;
     color: #000000;
+    padding-bottom: 20px;
 }
 
 .shop__container {
@@ -2797,6 +2803,47 @@
 }
 
 
+@media only screen and (max-width:1150px) {
+    .shop__container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .shop__filter__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+        margin-top: 10px;
+    }
+
+    .shop__selling {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:853px) {
+    .shop__selling__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop__filter__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width:517px) {
+    .shop__selling__body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .shop__filter__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 /* =========== sign in =================== */
 .signIn {
