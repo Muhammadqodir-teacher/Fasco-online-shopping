@@ -235,7 +235,8 @@
     #menu__icon {
         font-size: 12px;
     }
-    .menu__footer{
+
+    .menu__footer {
         flex-direction: column;
     }
 }
@@ -409,7 +410,7 @@
 .brend {
     overflow: hidden;
     padding: 25px 0;
-    margin-top: 2%;
+    margin-top: 30px;
 }
 
 .brend__track {
@@ -441,7 +442,12 @@
     }
 }
 
-
+@media only screen and (max-width:715px) {
+    .brend__track img {
+        width: 150px;
+        height: auto;
+    }
+}
 
 /* ====== monthly  deals ======= */
 .monthly__deals {
@@ -552,6 +558,7 @@
     width: 70%;
     display: flex;
     position: relative;
+    margin-top: 30px;
 }
 
 .monthly__carusel__control {
@@ -694,6 +701,46 @@
         font-size: 18px;
     }
 }
+
+@media only screen and (max-width:620px) {
+    .monthly__carusel {
+        flex-direction: column-reverse;
+    }
+
+    .dot__group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .monthly__carusel__container {
+        justify-content: end;
+    }
+
+    .slide {
+        right: -33%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .monthly__title {
+        font-size: 35px;
+    }
+
+    .monthly__text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .monthly__time__title {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+}
+
+
 
 
 /* ====== products ======== */
@@ -1509,7 +1556,8 @@
     align-items: center;
     justify-content: center;
     margin-top: 5%;
-    padding: 30px 0;
+    padding: 40px 0;
+    position: relative;
 }
 
 .arrivals__container {
@@ -1564,6 +1612,7 @@
     color: #8A8A8A;
     box-shadow: var(--boxShadow);
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .arrivals__nav .activeFashion {
@@ -1625,12 +1674,14 @@
 }
 
 .arrivals__card__auther {
+    text-align: left;
     font-family: Poppins;
     font-weight: 500;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0%;
     color: var(--textColor);
+    padding: 10px 0;
 }
 
 .arrivals__card__costumer {
@@ -1689,17 +1740,25 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:1177px) {
     .arrivals__nav {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
     }
 
     .arrivals__nav button {
-        padding: 15px 15px;
-        font-size: 14px;
-
+        box-shadow: none;
     }
+
+    .arrivals__nav::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:900px) {
 
     .fashion {
         grid-template-columns: repeat(2, 1fr);
@@ -1714,21 +1773,105 @@
     }
 }
 
-@media only screen and (max-width:850px) {
-    .arrivals__nav {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+@media only screen and (max-width:850px) {}
 
 @media only screen and (max-width:647px) {
     .fashion {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .arrivals__nav {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    .arrivals__text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width:618px) {
+    .arrivals__collect__card {
+        padding: 10px;
+    }
+
+    .arrivals__card__bodyBox p {
+        font-size: 17px;
+    }
+
+    .arrivals__card__star img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .arrivals__card__auther {
+        font-size: 10px;
+    }
+
+    .arrivals__card__costumer {
+        font-size: 10px;
+    }
+
+    .arrivals__card__footerText {
+        font-size: 20px;
+    }
+
+    .arrivals__card__footerSold {
+        font-size: 12px;
+    }
+
+    .fashion {
+        grid-gap: 8px;
+    }
+
+
+    .arrivals__title {
+        font-size: 32px;
+    }
+
+    .arrivals__text {
+        font-size: 10px;
+        padding-bottom: 15px;
+    }
+
+    .arrivals__viewBtn {
+        margin-top: 30px;
+        padding: 18px 30px;
+    }
+}
+
+@media only screen and (max-width:467px) {
+    .arrivals__collect__card {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .fashion {
+        grid-gap: 15px;
+        row-gap: 25px;
+    }
+
+    .arrivals__nav button {
+        padding: 10px 15px;
+        box-shadow: none;
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+    .arrivals__card__bodyBox p {
+        font-size: 12px;
+    }
+
+    .arrivals__card__star img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .arrivals__card__footerText {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:365px) {
+    .fashion {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -1752,6 +1895,8 @@
 
 .women__img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .women__data {
@@ -1884,6 +2029,41 @@
     }
 }
 
+@media only screen and (max-width:600px) {
+    .woman__subtitle {
+        font-size: 15px;
+    }
+
+    .women__title {
+        font-size: 36px;
+    }
+
+    .women__discription {
+        font-size: 14px;
+    }
+
+    .women__textInfo {
+        font-size: 12px;
+    }
+
+    .women__sizeText {
+        font-size: 14px;
+    }
+
+    .women__SizeBtn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .women__money {
+        font-size: 22px;
+    }
+
+    .women__shopBtn {
+        padding: 20px 30px;
+    }
+}
+
 /* ===== advantages ======== */
 .advantages {
     width: 100%;
@@ -1900,6 +2080,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .advantages__box {
@@ -1907,6 +2088,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .advantages__box img {
@@ -1934,9 +2116,15 @@
 
 @media only screen and (max-width:1225px) {
     .adventages__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 25px;
+        overflow-x: auto;
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .adventages__container::-webkit-scrollbar {
+        display: none;
     }
 
     .advantages__box__item h3 {
@@ -1948,7 +2136,31 @@
     }
 }
 
+@media only screen and (max-width:630px) {
+    .advantages {
+        padding: 30px 0;
+        box-shadow: none;
+    }
 
+    .advantages__box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .advantages__box__item h3 {
+        font-size: 14px;
+    }
+
+    .advantages__box__item p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .advantages {
+        padding: 20px 0;
+    }
+}
 
 
 /* ====== followUs ========= */
@@ -1956,6 +2168,7 @@
     width: 100%;
     height: auto;
     margin-top: 4%;
+    padding: 40px 0;
 }
 
 .followUS__title {
@@ -1981,6 +2194,7 @@
     letter-spacing: 0%;
     text-align: center;
     color: #8A8A8A;
+    padding: 0 15px;
 }
 
 .followUS__container {
@@ -1994,6 +2208,30 @@
 
 .followUS__container img {
     object-fit: contain;
+}
+
+@media only screen and (max-width:900px) {
+    .followUS__title {
+        font-size: 36px;
+    }
+
+    .followUs__text {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .followUS__title {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .followUs__text {
+        width: 100%;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 
 /* ====== customer =========== */
@@ -2909,10 +3147,12 @@
     justify-content: center;
 }
 
+
 .signin__img img {
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: cover;
+    display: block;
 }
 
 .sigin__logo {
@@ -3098,6 +3338,9 @@
     }
 
 
+    .signin__img img {
+        height: 100%;
+    }
 
     .signin__img {
         width: 100%;
@@ -3158,6 +3401,7 @@
 
 .signup__img img {
     width: 100%;
+    height: 700px;
     display: flex;
     object-fit: cover;
 }
