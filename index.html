@@ -46,9 +46,9 @@
                 </div>
                 <div class="nav__icons" id="nav__icons">
                     <i class="ri-search-line"></i>
-                    <i class="ri-user-3-line"></i>
-                    <i class="ri-star-line"></i>
-                    <i class="ri-shopping-bag-line"></i>
+                    <i class="ri-user-3-line" id="logOut__btn"></i>
+                    <i class="ri-star-line" data-switcher data-tab="7"></i>
+                    <i class="ri-shopping-bag-line" data-switcher data-tab="8"></i>
                 </div>
                 <i class="ri-menu-3-fill" id="bars"></i>
             </nav>
@@ -1701,7 +1701,8 @@
                             </div>
                             <div class="products__img__main">
                                 <img class="imgPage " src="./images/products__img-1.png" alt="img" data-filter="1">
-                                <img class="imgPage imgActive" src="./images/products__img-2.png" alt="img" data-filter="2">
+                                <img class="imgPage imgActive" src="./images/products__img-2.png" alt="img"
+                                    data-filter="2">
                                 <img class="imgPage" src="./images/products__img-3.png" alt="img" data-filter="3">
                                 <img class="imgPage" src="./images/products__img-4.png" alt="img" data-filter="4">
                                 <img class="imgPage" src="./images/products__img-5.png" alt="img" data-filter="5">
@@ -2075,6 +2076,321 @@
                         <a href="#" class="shopping__href">View Cart</a>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="shopCard page" data-page="7">
+                <section class="shopCard">
+                    <div class="shopCard__container">
+                        <h1 class="chopCard__title">Shopping Cart</h1>
+                        <p class="chopCard__text">Home > Your Shopping Cart</p>
+
+                        <div class="shopCard__box">
+                            <div class="shopCard__box__header">
+                                <p class="shopCard__header__text">Product</p>
+                                <p class="shopCard__header__text">Price</p>
+                                <p class="shopCard__header__text">Quantity</p>
+                                <p class="shopCard__header__text">Total</p>
+                            </div>
+
+                            <div class="shopCard__box__body">
+                                <div class="shopCard__body__prod">
+                                    <div>
+                                        <img src="./images/products__img-2.png" alt="" width="150">
+                                    </div>
+                                    <div class="shopCard__body__prodText">
+                                        <h5>Mini dress with ruffled straps</h5>
+                                        <p>Color : Red</p>
+                                        <p id="CardRemove">Remove</p>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__price">$14.90</p>
+                                <div class="shopCard__body__Quantity">
+                                    <div class="products__quantity__main">
+                                        <div class="products__quantity__box">
+                                            <button id="minus">-</button>
+                                            <p id="number">1</p>
+                                            <button id="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__total">$14.90</p>
+                            </div>
+
+                            <div class="shopCard__box__footer">
+
+                                <div class="shopCard__box__footer__box">
+                                    <div class="shopping__body">
+                                        <div>
+                                            <input type="checkbox" class="shopping__checkbox">
+                                        </div>
+                                        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
+                                    </div>
+                                    <div class="shopping__footer">
+                                        <div class="shopping__footer__top">
+                                            <p>Subtotal</p>
+                                            <p>$100.00</p>
+                                        </div>
+                                        <button class="shopping__checkoutbtn">Checkout</button>
+                                        <a href="#" class="shopping__href">View Cart</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= subscripe =========-->
+                <section class="subscripe">
+                    <div class="subscripe__container">
+                        <div class="subscripe__img">
+                            <img src="./images/subscripe-img-1.png" alt="">
+                        </div>
+                        <div class="subscripe__data">
+                            <h1 class="subscripe__title">Subscribe To Our Newsletter</h1>
+                            <p class="subscripe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Scelerisque
+                                duis
+                                ultrices sollicitudin aliquam sem. Scelerisque duis
+                            </p>
+                            <input type="text" placeholder="michael@ymail.com" class="subscripe__input">
+                            <button class="subscripe__btn">Subscribe Now</button>
+                        </div>
+                        <div class="subscripe__img">
+                            <img src="./images/subscripe-img-2.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="shopCard page" data-page="8">
+                <section class="shopCard">
+                    <div class="shopCard__container">
+                        <h1 class="chopCard__title">Shopping Cart</h1>
+                        <p class="chopCard__text">Home > Your Shopping Cart</p>
+
+                        <div class="shopCard__box">
+                            <div class="shopCard__box__header">
+                                <p class="shopCard__header__text">Product</p>
+                                <p class="shopCard__header__text">Price</p>
+                                <p class="shopCard__header__text">Quantity</p>
+                                <p class="shopCard__header__text">Total</p>
+                            </div>
+
+                            <div class="shopCard__box__body">
+                                <div class="shopCard__body__prod">
+                                    <div>
+                                        <img src="./images/products__img-2.png" alt="" width="150">
+                                    </div>
+                                    <div class="shopCard__body__prodText">
+                                        <h5>Mini dress with ruffled straps</h5>
+                                        <p>Color : Red</p>
+                                        <p id="CardRemove">Remove</p>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__price">$14.90</p>
+                                <div class="shopCard__body__Quantity">
+                                    <div class="products__quantity__main">
+                                        <div class="products__quantity__box">
+                                            <button id="minus">-</button>
+                                            <p id="number">1</p>
+                                            <button id="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__total">$14.90</p>
+                            </div>
+
+                            <div class="shopCard__box__footer">
+
+                                <div class="shopCard__box__footer__box">
+                                    <div class="shopping__body">
+                                        <div>
+                                            <input type="checkbox" class="shopping__checkbox">
+                                        </div>
+                                        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
+                                    </div>
+                                    <div class="shopping__footer">
+                                        <div class="shopping__footer__top">
+                                            <p>Subtotal</p>
+                                            <p>$100.00</p>
+                                        </div>
+                                        <button class="shopping__checkoutbtn" data-switcher
+                                            data-tab="9">Checkout</button>
+                                        <a href="#" class="shopping__href">View Cart</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= subscripe =========-->
+                <section class="subscripe">
+                    <div class="subscripe__container">
+                        <div class="subscripe__img">
+                            <img src="./images/subscripe-img-1.png" alt="">
+                        </div>
+                        <div class="subscripe__data">
+                            <h1 class="subscripe__title">Subscribe To Our Newsletter</h1>
+                            <p class="subscripe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Scelerisque
+                                duis
+                                ultrices sollicitudin aliquam sem. Scelerisque duis
+                            </p>
+                            <input type="text" placeholder="michael@ymail.com" class="subscripe__input">
+                            <button class="subscripe__btn">Subscribe Now</button>
+                        </div>
+                        <div class="subscripe__img">
+                            <img src="./images/subscripe-img-2.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="checkout page" data-page="9">
+                <section class="checkout">
+                    <div class="checkout__container">
+                        <h1 class="chekout__title">FASCO Demo Checkout</h1>
+
+                        <div class="chekout__filter">
+                            <form class="chekout__data">
+
+                                <div class="checkout__email__box">
+                                    <div class="checkout__email__top">
+                                        <h2 class="chekout__email__text">Contact</h2>
+                                        <p>
+                                            Have an account? <a href="#">Create Account</a>
+                                        </p>
+                                    </div>
+
+                                    <input type="email" class="checkout__emaolInput" placeholder="Email Address"
+                                        required>
+                                </div>
+
+                                <div class="checkout__delivery__box">
+                                    <h1 class="checkout__delivery__title">Delivery</h1>
+                                    <div class="checkout__delivery__body">
+                                        <div class="checkout__delivery__body__box">
+                                            <input type="text" placeholder="Country / Region" class="delivery__country"
+                                                readonly>
+                                            <div>
+                                                <i id="checkout__delivery__open" class="ri-arrow-down-wide-fill"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="checkout__delivery__body__data">
+                                            <div class="checkout__delivery__top">
+                                                <input type="text" placeholder="First Name" class="chekout__F_Name">
+                                                <input type="text" placeholder="Last Name" class="chekout__L_Name">
+                                            </div>
+                                            <input type="text" placeholder="Address"
+                                                class="checkout__delivery__top__body">
+                                            <div class="checkout__delivery__bottom">
+                                                <input type="text" placeholder="City" class="chekout__city">
+                                                <input type="number" placeholder="Postal Code" class="chekout__pastal">
+                                            </div>
+                                            <div class="checkout__save__data">
+                                                <input type="checkbox" style="transform: scale(1.2)">
+                                                <p>Save This Info for future</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="checkout__payment__box">
+                                    <h1 class="checkout__payment__title">Payment</h1>
+
+                                    <div class="checkout__payment__card">
+                                        <input type="text" placeholder="Credit Card"
+                                            class="checkout__payment__cardInput" readonly>
+                                        <div>
+                                            <img src="./images/checkout-payment-img.png" alt="" width="70">
+                                            <i id="checkout__payment__open" class="ri-arrow-down-wide-fill"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__payment__data">
+                                        <div class="checkout__payment__dataTop">
+                                            <input type="number" placeholder="Card Number">
+                                            <i class="ri-git-repository-private-fill"></i>
+                                        </div>
+                                        <div class="checkout__payment__dataBody">
+                                            <input type="number" placeholder="Expiration Date "
+                                                class="checkout__payment__dataInput">
+                                            <input type="number" placeholder="Security Code "
+                                                class="checkout__payment__dataInput">
+                                        </div>
+                                        <input type="text" placeholder="Card Holder Name"
+                                            class="checkout__payment__dataBottom">
+                                        <div class="checkout__save__data">
+                                            <input type="checkbox" style="transform: scale(1.2)">
+                                            <p>Save This Info for future</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="pay__now">Pay Now</button>
+
+                                <p class="filter__bottom__text">Copyright © 2025 FASCO . All Rights Reseved.</p>
+                            </form>
+
+
+                            <div class="chekout__card">
+                                <div class="chekout__card__box">
+                                    <div class="chekout__card__boxTop">
+                                        <img src="./images/products__img-2.png" alt="" width="130">
+                                        <div class="chekout__card__topItem">
+                                            <h4>Mini dress with ruffled straps</h4>
+                                            <p>Red</p>
+                                        </div>
+                                        <p class="chekout__card__topMoney">$100.00</p>
+                                    </div>
+                                    <form class="chekout__card__boxBody">
+                                        <input type="text" placeholder="Discount code" class="checkout__discound"
+                                            required>
+                                        <button type="submit" class="checkout__discound__btn">Apply</button>
+                                    </form>
+                                    <div class="chekout__card__boxBottom">
+                                        <div class="chekout__card__boxBottom__text">
+                                            <p class="subtotal">Subtotal</p>
+                                            <p id="subtotal__content">$100.00</p>
+                                        </div>
+                                        <div class="chekout__card__boxBottom__text">
+                                            <p class="shipping">Shipping</p>
+                                            <p id="shipping__content">$40.00</p>
+                                        </div>
+                                        <div class="chekout__card__boxBottom__text">
+                                            <p class="total">Total</p>
+                                            <p id="Total__content">$140.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="logOut page">
+                <section class="logOut">
+                    <div class="logOut__container">
+                        <h1>Log out ?</h1>
+
+                        <div class="logOut__btns">
+                            <button id="noOut">No , out</button>
+                            <button id="yesOut">Yes , out</button>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 

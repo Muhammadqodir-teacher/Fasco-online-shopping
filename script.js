@@ -74,7 +74,6 @@ signUpSubmit.addEventListener('click', () => {
         }
     ]
 
-    console.log(obj);
 
 
 
@@ -102,11 +101,8 @@ signUpSubmit.addEventListener('click', () => {
 
 
 
-        document.querySelectorAll(".signup__input").forEach(input => {
-            input.value = " ";
-        });
-        alert(`Saytga hush kelibsiz ! ${lastName.value
-            }  ${firstName.value}`);
+        alert(`Saytga hush kelibsiz ! ${lastName.value}  ${firstName.value}`);
+        location.reload();
     }
 
 
@@ -150,11 +146,11 @@ window.onload = function () {
 
 
     const tab_imgs = document.querySelectorAll('[data-img]');
-    for (let i = 0; i < tab_imgs.length; i++){
+    for (let i = 0; i < tab_imgs.length; i++) {
         const tab_img = tab_imgs[i];
         const img_id = tab_img.dataset.tab;
 
-        tab_img.addEventListener('click', () =>{
+        tab_img.addEventListener('click', () => {
             const imgActive = document.querySelector(".products__img__collect .products__item.imgActive")
             if (imgActive) {
                 imgActive.classList.remove("imgActive");
@@ -274,7 +270,7 @@ function timeCard() {
     shopCardContainer.style.display = "block";
 }
 
-shopCardClose.addEventListener('click', () =>{
+shopCardClose.addEventListener('click', () => {
     shopCardContainer.style.display = "none"
 });
 setInterval(timeCard, 990000)
@@ -329,3 +325,62 @@ function currentSlide(dir) {
 }
 
 
+// ============= check out dropdown ==========
+
+const deliverOpen = document.getElementById("checkout__delivery__open");
+const deliverCon = document.querySelector(".checkout__delivery__body__data");
+const paymentOpen = document.getElementById("checkout__payment__open");
+const paymentCon = document.querySelector(".checkout__payment__data");
+
+let isOpen = false;
+
+
+deliverOpen.addEventListener('click', () => {
+    if (!isOpen) {
+        deliverCon.style.display = "block"
+        deliverOpen.style.transform = "rotate(0deg)"
+        isOpen = true;
+    } else {
+        deliverCon.style.display = "none"
+        deliverOpen.style.transform = "rotate(180deg)"
+        isOpen = false;
+    }
+});
+
+
+let payOpen = false;
+
+
+paymentOpen.addEventListener('click', () => {
+    if (!payOpen) {
+        paymentCon.style.display = "block"
+        paymentOpen.style.transform = "rotate(0deg)"
+        payOpen = true;
+    } else {
+        paymentCon.style.display = "none"
+        paymentOpen.style.transform = "rotate(180deg)"
+        payOpen = false;
+    }
+});
+
+// ================== log out =================
+const logOutBtn = document.getElementById("logOut__btn");
+const logOutCon = document.querySelector(".logOut");
+const logYes = document.getElementById("yesOut");
+const logNo = document.getElementById("noOut");
+
+logOutCon.style.display = "none"
+
+logOutBtn.addEventListener('click', () => {
+    logOutCon.style.display = "flex"
+});
+
+logNo.addEventListener('click', () => {
+    logOutCon.style.display = "none"
+});
+
+logYes.addEventListener('click', () => {
+    logOutCon.style.display = "none"
+    localStorage.clear();
+    location.reload();
+});
