@@ -95,7 +95,6 @@ signUpSubmit.addEventListener('click', () => {
         localStorage.setItem('password', obj[0].regPassword);
         localStorage.setItem('configPassword', obj[0].regConfigPas);
         navIcons.style.display = "flex";
-        menuIcons.style.display = "flex";
         signin.style.display = "none";
         signup.style.display = "none";
         menuSignin.style.display = "none";
@@ -150,6 +149,21 @@ window.onload = function () {
     }
 
 
+    const tab_imgs = document.querySelectorAll('[data-img]');
+    for (let i = 0; i < tab_imgs.length; i++){
+        const tab_img = tab_imgs[i];
+        const img_id = tab_img.dataset.tab;
+
+        tab_img.addEventListener('click', () =>{
+            const imgActive = document.querySelector(".products__img__collect .products__item.imgActive")
+            if (imgActive) {
+                imgActive.classList.remove("imgActive");
+            }
+            tab_img.classList.add("imgActive");
+            changeImg(img_id);
+        });
+    }
+
     // ============== local stroge ================
     const savedNameF = localStorage.getItem('firsName');
     const savedNameL = localStorage.getItem('lastName');
@@ -160,7 +174,6 @@ window.onload = function () {
 
     if (savedNameF && savedNameL && savedEmail && savedTel && savedPassword && savedPasswordC) {
         navIcons.style.display = "flex";
-        menuIcons.style.display = "flex";
         signin.style.display = "none";
         signup.style.display = "none";
         menuSignin.style.display = "none";
@@ -185,6 +198,14 @@ function changeFashion(fashion_id) {
     if (next_fashion) {
         next_fashion.classList.add("activeFashion");
     }
+}
+
+function changeImg(img_id) {
+    const current_img = document.querySelector(".products__img__main .imgPage.imgActive");
+    current_img.classList.remove("imgActive");
+
+    const next_img = document.querySelector(`.products__img__main .imgPage[data-filter="${img_id}"]`);
+    next_img.classList.add("imgActive");
 }
 
 
@@ -244,20 +265,20 @@ minusBtn.addEventListener('click', () => {
 });
 
 
-const shopCardBtn = document.querySelector(".products__quantity__item");
 const shopCardContainer = document.querySelector(".shopping__container");
 const shopCardClose = document.getElementById("shopping--close");
 const shopCard = document.querySelector(".shopping__card");
 
-shopCardBtn.addEventListener('click', () => {
-    shopCard.style.right = "0px"
-    shopCardContainer.style.display = "block"
-});
 
-shopCardClose.addEventListener('click', () => {
-    shopCard.style.right = "-600px"
+function timeCard() {
+    shopCardContainer.style.display = "block";
+}
+
+shopCardClose.addEventListener('click', () =>{
     shopCardContainer.style.display = "none"
 });
+setInterval(timeCard, 990000)
+
 
 
 
