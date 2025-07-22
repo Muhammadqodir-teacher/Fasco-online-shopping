@@ -29,6 +29,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    z-index: 9999;
 }
 
 .nav {
@@ -104,6 +106,7 @@
     justify-content: space-between;
     flex-direction: column;
     transition: all 1s;
+    z-index: 99999;
 }
 
 .menu__top {
@@ -3953,7 +3956,11 @@
 .shopCard__box__footer__box {
     width: 50%;
 }
-
+#card{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 30px;
+}
 @media only screen and (max-width:1270px) {
     .shopCard__body__prodText h5 {
         font-size: 16px;

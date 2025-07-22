@@ -384,3 +384,182 @@ logYes.addEventListener('click', () => {
     localStorage.clear();
     location.reload();
 });
+
+
+
+
+
+let products = [
+    {
+        imgage: "./images/arrivals-card-img-1.png",
+        name: "Shiny Dress",
+        price: "$95.50"
+    },
+    {
+        imgage: "./images/arrivals-card-img-2.png",
+        name: "Long Dress",
+        price: "$95.50"
+    },
+    {
+        imgage: "./images/arrivals-card-img-3.png",
+        name: "Full Sweater",
+        price: "$95.50"
+    },
+    {
+        imgage: "./images/arrivals-card-img-4.png",
+        name: "White Dress",
+        price: "$95.50"
+    },
+    {
+        imgage: "./images/arrivals-card-img-5.png",
+        name: "Colorful Dress",
+        price: "$95.50"
+    },
+    {
+        imgage: "./images/arrivals-card-img-6.png",
+        name: "White Shirt",
+        price: "$95.50"
+    },
+]
+
+const productsDiv = document.getElementById("product");
+
+for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    productsDiv.innerHTML += `
+     <div class="arrivals__collect__card">
+        <div class="arrivals__card__header">
+            <img src="${product.imgage}" alt="">
+        </div>
+        <div class="arrivals__card__body">
+            <div class="arrivals__card__bodyBox">
+                <p>${product.name}</p>
+                <div class="arrivals__card__star">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                </div>
+            </div>
+            <p class="arrivals__card__auther">Al Karam</p>
+
+            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+        </div>
+        <div class="arrivals__card__footer">
+            <p class="arrivals__card__footerText">${product.price}</p>
+            <p  class="arrivals__card__footerSold" onclick="addToCard(${i})">Almost Sold Out</p>
+        </div>
+    </div>
+
+    `
+}
+
+const cardDiv = document.getElementById("card");
+
+let cards = [
+
+];
+
+let restard = () => {
+
+    cardDiv.innerHTML = ``;
+
+    for (let i = 0; i < cards.length; i++) {
+
+        const product = cards[i];
+
+        cardDiv.innerHTML += `
+        <div class="shopCard__box">
+                            <div class="shopCard__box__header">
+                                <p class="shopCard__header__text">Product</p>
+                                <p class="shopCard__header__text">Price</p>
+                                <p class="shopCard__header__text">Quantity</p>
+                                <p class="shopCard__header__text">Total</p>
+                            </div>
+
+                            <div class="shopCard__box__body">
+                                <div class="shopCard__body__prod">
+                                    <div>
+                                        <img src="${product.imgage}" alt="" width="170">
+                                    </div>
+                                    <div class="shopCard__body__prodText">
+                                        <h5>${product.name}</h5>
+                                        <p>Color : Red</p>
+                                        <p id="CardRemove" onclick="remove(${i})">Remove</p>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__price" id="cardMon">${product.price}</p>
+                                <div class="shopCard__body__Quantity">
+                                    <div class="products__quantity__main">
+                                        <div class="products__quantity__box">
+                                            <button id="btnMinus">-</button>
+                                            <p id="textNumber">1</p>
+                                            <button id="btnPlus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="shopCard__body__total" id="">${product.price}</p>
+                            </div>
+
+                            <div class="shopCard__box__footer">
+
+                                <div class="shopCard__box__footer__box">
+                                    <div class="shopping__body">
+                                        <div>
+                                            <input type="checkbox" class="shopping__checkbox">
+                                        </div>
+                                        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
+                                    </div>
+                                    <div class="shopping__footer">
+                                        <div class="shopping__footer__top">
+                                            <p>Subtotal</p>
+                                            <p>$100.00</p>
+                                        </div>
+                                        <button class="shopping__checkoutbtn" data-switcher
+                                            data-tab="9">Checkout</button>
+                                        <a href="#" class="shopping__href">View Cart</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+        `
+    }
+
+
+}
+function addToCard(index) {
+    const product = products[index];
+    cards.push(product);
+    alert("Mahsulot savatga qoshildi !");
+    restard();
+}
+
+
+function remove(index) {
+    cards.splice(index , 1);
+    restard();
+}
+
+
+
+
+
+
+document.addEventListener("click", function (e) {
+  const switcher = e.target.closest("[data-switcher]");
+  if (switcher) {
+    const targetTab = switcher.getAttribute("data-tab");
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach((page) => {
+      page.classList.remove("activePage");
+    });
+
+    const targetPage = document.querySelector(`.page[data-page="${targetTab}"]`);
+    if (targetPage) {
+      targetPage.classList.add("activePage");
+    }
+  }
+});
