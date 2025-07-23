@@ -387,7 +387,58 @@ logYes.addEventListener('click', () => {
 
 
 
+document.addEventListener("click", function (e) {
+    const switcher = e.target.closest("[data-switcher]");
+    if (switcher) {
+        const targetTab = switcher.getAttribute("data-tab");
+        const pages = document.querySelectorAll(".page");
 
+        pages.forEach((page) => {
+            page.classList.remove("activePage");
+        });
+
+        const targetPage = document.querySelector(`.page[data-page="${targetTab}"]`);
+        if (targetPage) {
+            targetPage.classList.add("activePage");
+        }
+    }
+});
+
+
+
+
+const mens = [
+    {
+        Image: "./images/means-img-1.png",
+        name: "Brunello Cucinelli",
+        price: "$95.50"
+    },
+    {
+        Image: "./images/means-img-2.png",
+        name: "Long Dress",
+        price: "$95.50"
+    },
+    {
+        Image: "./images/means-img-3.png",
+        name: "Full Sweater",
+        price: "$95.50"
+    },
+    {
+        Image: "./images/means-img-4.png",
+        name: "Casablanca",
+        price: "$95.50"
+    },
+    {
+        Image: "./images/means-img-5.png",
+        name: "Colorful Dress",
+        price: "$95.50"
+    },
+    {
+        Image: "./images/means-img-6.png",
+        name: "White Shirt",
+        price: "$95.50"
+    },
+]
 
 let products = [
     {
@@ -422,7 +473,72 @@ let products = [
     },
 ]
 
+const womens = [
+    {
+        image: "./images/woman-img-1.png",
+        name: "Dolce & Gabbana",
+        price: "$95.50"
+    },
+    {
+        image: "./images/woman-img-2.png",
+        name: "Altuzarra",
+        price: "$95.50"
+    },
+    {
+        image: "./images/woman-img-3.png",
+        name: "Bottega Veneta",
+        price: "$95.50"
+    },
+    {
+        image: "./images/woman-img-4.png",
+        name: "Miu Miu",
+        price: "$95.50"
+    },
+    {
+        image: "./images/woman-img-5.png",
+        name: "Prada",
+        price: "$95.50"
+    },
+    {
+        image: "./images/woman-img-6.png",
+        name: "Rowen Rose",
+        price: "$95.50"
+    },
+]
+
 const productsDiv = document.getElementById("product");
+const mensDiv = document.getElementById("mens");
+const womanDiv = document.getElementById("woman");
+
+for (let i = 0; i < mens.length; i++) {
+    const men = mens[i];
+    mensDiv.innerHTML += `
+     <div class="arrivals__collect__card">
+        <div class="arrivals__card__header">
+            <img src="${men.Image}" alt="" height="352">
+        </div>
+        <div class="arrivals__card__body">
+            <div class="arrivals__card__bodyBox">
+                <p>${men.name}</p>
+                <div class="arrivals__card__star">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                    <img src="./images/star.svg" alt="img">
+                </div>
+            </div>
+            <p class="arrivals__card__auther">Al Karam</p>
+
+            <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+        </div>
+        <div class="arrivals__card__footer">
+            <p class="arrivals__card__footerText">${men.price}</p>
+            <p class="arrivals__card__footerSold">Almost Sold Out</p>
+        </div>
+    
+    `
+}
 
 for (let i = 0; i < products.length; i++) {
     const product = products[i];
@@ -448,10 +564,40 @@ for (let i = 0; i < products.length; i++) {
         </div>
         <div class="arrivals__card__footer">
             <p class="arrivals__card__footerText">${product.price}</p>
-            <p  class="arrivals__card__footerSold" onclick="addToCard(${i})">Almost Sold Out</p>
+            <button  class="arrivals__card__footerSold" onclick="addToCard(${i})">buy</button>
         </div>
     </div>
 
+    `
+}
+
+for (let i = 0; i < womens.length; i++) {
+    const women = womens[i];
+    womanDiv.innerHTML += `
+     <div class="arrivals__collect__card" >
+                                    <div class="arrivals__card__header">
+                                        <img src="${women.image}" alt="">
+                                    </div>
+                                    <div class="arrivals__card__body">
+                                        <div class="arrivals__card__bodyBox">
+                                            <p>${women.name}</p>
+                                            <div class="arrivals__card__star">
+                                                <img src="./images/star.svg" alt="img">
+                                                <img src="./images/star.svg" alt="img">
+                                                <img src="./images/star.svg" alt="img">
+                                                <img src="./images/star.svg" alt="img">
+                                                <img src="./images/star.svg" alt="img">
+                                            </div>
+                                        </div>
+                                        <p class="arrivals__card__auther">Al Karam</p>
+
+                                        <p class="arrivals__card__costumer">(4.1k) Customer Reviews</p>
+                                    </div>
+                                    <div class="arrivals__card__footer">
+                                        <p class="arrivals__card__footerText">${women.price}</p>
+                                        <p class="arrivals__card__footerSold">Almost Sold Out</p>
+                                    </div>
+                                </div>
     `
 }
 
@@ -538,7 +684,7 @@ function addToCard(index) {
 
 
 function remove(index) {
-    cards.splice(index , 1);
+    cards.splice(index, 1);
     restard();
 }
 
@@ -547,19 +693,3 @@ function remove(index) {
 
 
 
-document.addEventListener("click", function (e) {
-  const switcher = e.target.closest("[data-switcher]");
-  if (switcher) {
-    const targetTab = switcher.getAttribute("data-tab");
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach((page) => {
-      page.classList.remove("activePage");
-    });
-
-    const targetPage = document.querySelector(`.page[data-page="${targetTab}"]`);
-    if (targetPage) {
-      targetPage.classList.add("activePage");
-    }
-  }
-});

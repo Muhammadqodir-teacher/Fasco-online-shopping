@@ -1696,10 +1696,14 @@
 
 .arrivals__card__header {
     width: 100%;
+    height: 400px;
 }
 
 .arrivals__card__header img {
     width: 100%;
+    border-radius: var(--borderRAdius);
+    object-fit: cover;
+    height: 100%;
 }
 
 .arrivals__card__body {
@@ -1768,14 +1772,18 @@
 }
 
 .arrivals__card__footerSold {
+    padding: 8px 20px;
     font-family: Poppins;
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: -1%;
     text-align: right;
-    color: #FF4646;
+    color: #FFFFFF;
     cursor: pointer;
+    border-radius:5px;
+    background:rgb(255, 14, 14);
+    border: none;
 }
 
 .arrivals__viewBtn {
@@ -1939,6 +1947,9 @@
         flex-direction: column;
         align-items: start;
         gap: 10px;
+    }
+    .arrivals__card__bodyBox{
+        flex-direction: column;
     }
 }
 
