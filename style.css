@@ -1781,8 +1781,8 @@
     text-align: right;
     color: #FFFFFF;
     cursor: pointer;
-    border-radius:5px;
-    background:rgb(255, 14, 14);
+    border-radius: 5px;
+    background: rgb(255, 14, 14);
     border: none;
 }
 
@@ -1930,6 +1930,12 @@
     .arrivals__card__footerText {
         font-size: 16px;
     }
+
+    .arrivals__card__footer {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
 }
 
 @media only screen and (max-width:365px) {
@@ -1948,7 +1954,8 @@
         align-items: start;
         gap: 10px;
     }
-    .arrivals__card__bodyBox{
+
+    .arrivals__card__bodyBox {
         flex-direction: column;
     }
 }
@@ -3116,6 +3123,7 @@
     justify-content: space-between;
 }
 
+
 .selling__logo {
     font-family: Volkhov;
     font-weight: 400;
@@ -3155,6 +3163,7 @@
 
 .selling__body__box {
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .selling__body__img {
@@ -3251,6 +3260,27 @@
     height: 20px;
 }
 
+.shop__selling__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 5px;
+}
+
+.sellingBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sellingActive {
+    background: #F3F3F3;
+}
 
 @media only screen and (max-width:1150px) {
     .shop__container {
@@ -3967,11 +3997,13 @@
 .shopCard__box__footer__box {
     width: 50%;
 }
-#card{
+
+#card {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 30px;
 }
+
 @media only screen and (max-width:1270px) {
     .shopCard__body__prodText h5 {
         font-size: 16px;
@@ -4680,11 +4712,13 @@
     line-height: 100%;
     letter-spacing: 0%;
 }
-#noOut{
+
+#noOut {
     background: #7fff00;
     color: #000;
 }
-#yesOut{
+
+#yesOut {
     background: #ff0000;
     color: #FFFFFF;
 }

@@ -111,7 +111,8 @@ signUpSubmit.addEventListener('click', () => {
 
 // ============ data switcher ============
 
-window.onload = function () {
+window.onload = function (event) {
+    event.preventDefault();
     const tab_switchers = document.querySelectorAll('[data-switcher]');
     for (let i = 0; i < tab_switchers.length; i++) {
         const tab_switcher = tab_switchers[i];
@@ -564,7 +565,7 @@ for (let i = 0; i < products.length; i++) {
         </div>
         <div class="arrivals__card__footer">
             <p class="arrivals__card__footerText">${product.price}</p>
-            <button  class="arrivals__card__footerSold" onclick="addToCard(${i})">buy</button>
+            <button  class="arrivals__card__footerSold" onclick="addToCard(${i})">Almost Sold Out</button>
         </div>
     </div>
 
@@ -617,59 +618,59 @@ let restard = () => {
 
         cardDiv.innerHTML += `
         <div class="shopCard__box">
-                            <div class="shopCard__box__header">
-                                <p class="shopCard__header__text">Product</p>
-                                <p class="shopCard__header__text">Price</p>
-                                <p class="shopCard__header__text">Quantity</p>
-                                <p class="shopCard__header__text">Total</p>
-                            </div>
+        <div class="shopCard__box__header">
+        <p class="shopCard__header__text">Product</p>
+        <p class="shopCard__header__text">Price</p>
+        <p class="shopCard__header__text">Quantity</p>
+        <p class="shopCard__header__text">Total</p>
+        </div>
 
-                            <div class="shopCard__box__body">
-                                <div class="shopCard__body__prod">
-                                    <div>
-                                        <img src="${product.imgage}" alt="" width="170">
-                                    </div>
-                                    <div class="shopCard__body__prodText">
-                                        <h5>${product.name}</h5>
-                                        <p>Color : Red</p>
-                                        <p id="CardRemove" onclick="remove(${i})">Remove</p>
-                                    </div>
-                                </div>
-                                <p class="shopCard__body__price" id="cardMon">${product.price}</p>
-                                <div class="shopCard__body__Quantity">
-                                    <div class="products__quantity__main">
+        <div class="shopCard__box__body">
+        <div class="shopCard__body__prod">
+        <div>
+        <img src="${product.imgage}" alt="" width="170">
+        </div>
+        <div class="shopCard__body__prodText">
+        <h5>${product.name}</h5>
+        <p>Color : Red</p>
+        <p id="CardRemove" onclick="remove(${i})">Remove</p>
+        </div>
+        </div>
+        <p class="shopCard__body__price" id="cardMon">${product.price}</p>
+        <div class="shopCard__body__Quantity">
+        <div class="products__quantity__main">
                                         <div class="products__quantity__box">
-                                            <button id="btnMinus">-</button>
-                                            <p id="textNumber">1</p>
-                                            <button id="btnPlus">+</button>
+        <button id="btnMinus">-</button>
+        <p id="textNumber">1</p>
+        <button id="btnPlus">+</button>
                                         </div>
-                                    </div>
-                                </div>
-                                <p class="shopCard__body__total" id="">${product.price}</p>
-                            </div>
+        </div>
+        </div>
+        <p class="shopCard__body__total" id="">${product.price}</p>
+        </div>
 
-                            <div class="shopCard__box__footer">
+        <div class="shopCard__box__footer">
 
-                                <div class="shopCard__box__footer__box">
-                                    <div class="shopping__body">
-                                        <div>
-                                            <input type="checkbox" class="shopping__checkbox">
-                                        </div>
-                                        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
-                                    </div>
-                                    <div class="shopping__footer">
-                                        <div class="shopping__footer__top">
-                                            <p>Subtotal</p>
-                                            <p>$100.00</p>
-                                        </div>
-                                        <button class="shopping__checkoutbtn" data-switcher
-                                            data-tab="9">Checkout</button>
-                                        <a href="#" class="shopping__href">View Cart</a>
-                                    </div>
-                                </div>
+        <div class="shopCard__box__footer__box">
+        <div class="shopping__body">
+        <div>
+        <input type="checkbox" class="shopping__checkbox">
+        </div>
+        <p class="shopping__text">For <b>$10.00</b> please wrap the product</p>
+        </div>
+        <div class="shopping__footer">
+        <div class="shopping__footer__top">
+        <p>Subtotal</p>
+        <p>$100.00</p>
+        </div>
+        <button class="shopping__checkoutbtn" data-switcher
+        data-tab="9">Checkout</button>
+        <a href="#" class="shopping__href">View Cart</a>
+        </div>
+        </div>
 
-                            </div>
-                        </div>
+        </div>
+             </div>
         `
     }
 
@@ -693,3 +694,248 @@ function remove(index) {
 
 
 
+
+
+
+// shop
+let shopArr = [
+    {
+        image: "./images/shop-page-img-1.png",
+        name: "Rounded Red Hat",
+        price: 8.00,
+        colorone: "#FFD700",
+        colortwo: "#000000"
+    },
+    {
+        image: "./images/shop-page-img-2.png",
+        name: "Long-sleeve Coat",
+        price: 106.00,
+        colorone: "#8DB4D2",
+        colortwo: "#FFD1DC"
+    },
+    {
+        image: "./images/shop-page-img-3.png",
+        name: "Boxy Denim Hat",
+        price: 25.00,
+        colorone: "#EBE6DB",
+        colortwo: "#C1E1C1"
+    },
+    {
+        image: "./images/shop-page-img-4.png",
+        name: "Linen Plain Top",
+        price: 25.00,
+        colorone: "#B1C5D4",
+        colortwo: "#063E66"
+    },
+    {
+        image: "./images/shop-page-img-5.png",
+        name: "Oversized T-shirt",
+        price: 11.00,
+        colorone: "#C1E1C1",
+        colortwo: "#000000"
+    },
+    {
+        image: "./images/shop-page-img-6.png",
+        name: "Polarised Sunglasses",
+        price: 18.00,
+        colorone: "#FFD1DC",
+        colortwo: "#C6AEC7"
+    },
+    {
+        image: "./images/shop-page-img-7.png",
+        name: "Rockstar Jacket",
+        price: 22.00,
+        colorone: "#000000",
+        colortwo: "#836953"
+    },
+    {
+        image: "./images/shop-page-img-8.png",
+        name: "Dotted Black Dress",
+        price: 20.00,
+        colorone: "#C6AEC7",
+        colortwo: "#BEDCE3"
+    },
+    {
+        image: "./images/shop-page-img-9.png",
+        name: "Rounded Red Hat",
+        price: 8.00,
+        colorone: "#063E66",
+        colortwo: "#000000"
+    }
+]
+
+const shopDiv = document.getElementById("shopContainer");
+for (let i = 0; i < shopArr.length; i++) {
+    const shopIndex = shopArr[i];
+    shopDiv.innerHTML += `
+     <div class="selling__body__box" data-switcher data-tab="3" onclick="openProduct(${i})">
+     <div class="selling__body__img">
+     <img src="${shopIndex.image}" alt="img">
+     </div>
+     <p class="selling__box__title">${shopIndex.name}</p>
+     <p class="selling__box__money">$${shopIndex.price}.00</p>
+     <div class="selling__color">
+     <button class="selling__color__box active">
+     <div style="background: ${shopIndex.colorone};"></div>
+     </button>
+     <button class="selling__color__box ">
+     <div style="background: ${shopIndex.colortwo};"></div>
+     </button>
+     </div>
+     </div>
+     `
+}
+
+
+let productArr = []
+
+const productDiv = document.getElementById("productContainer");
+
+let goProduct = () => {
+    productDiv.innerHTML = ""
+    for (let i = 0; i < productArr.length; i++) {
+        let shopIndex = productArr[i];
+
+        productDiv.innerHTML += `
+     <div class="products__imges">
+                            <div class="products__img__collect">
+                                <div class="products__item" data-img data-tab="1">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item imgActive" data-img data-tab="2">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item" data-img data-tab="3">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item" data-img data-tab="4">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item" data-img data-tab="5">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item" data-img data-tab="6">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                                <div class="products__item" data-img data-tab="7">
+                                <img src="${shopIndex.image}" alt="img" width="58" height="78"> 
+                                </div>
+                            </div>
+                            <div class="products__img__main">
+                                <img class="imgPage " src="${shopIndex.image}" data-filter="1">
+                                <img class="imgPage imgActive" src="${shopIndex.image}" alt="img" data-filter="2">
+                                <img class="imgPage" src="${shopIndex.image}" data-filter="3">
+                                <img class="imgPage" src="${shopIndex.image}" alt="img" data-filter="4">
+                                <img class="imgPage" src="${shopIndex.image}" alt="img" data-filter="5">
+                                <img class="imgPage" src="${shopIndex.image}" data-filter="6">
+                                <img class="imgPage" src="${shopIndex.image}" data-filter="7">
+                            </div>
+                        </div>
+                        <div class="products__data">
+                            <div class="products__data__logo">Fasco</div>
+                            <div class="products__evaluate">
+                                <h1 class="products__evaluate__text">${shopIndex.name}</h1>
+                                <div class="products__evaluate__star">
+                                <i class="ri-star-line"></i>
+                                </div>
+                            </div>
+                            <div class="productss__star">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <p class="products__star__number">(3)</p>
+                            </div>
+                            <div class="products__money">
+                                <p class="products__money__text">$${shopIndex.price}.00</p>
+                                <p class="products__money__subtext">$${shopIndex.price}.00</p>
+                                <button class="products__money__btn">Save <span>33%</span></button>
+                            </div>
+                            <div class="products__view">
+                                <i class="ri-eye-line"></i>
+                                <p class="products__view__text">24 people are viewing this right now</p>
+                            </div>
+                            <div class="products__discount">
+                                <p class="products__discount__text">Hurry up! Sale ends in:</p>
+                                <p class="products__discount__time"></p>
+                            </div>
+                            <div class="products__stock">
+                                <div class="products__stock__text">Only 9 item(s) left in stock!</div>
+                                <div class="products__stock__item">
+                                    <div class="products__stock__itemBox"></div>
+                                </div>
+                            </div>
+                            <div class="products__sizing">
+                                <p class="products__sizing__text">Size: M</p>
+
+                                <div class="products__sizing__main">
+                                <button class="products__sizing__btn active">M</button>
+                                <button class="products__sizing__btn">L</button>
+                                <button class="products__sizing__btn">XL</button>
+                                <button class="products__sizing__btn">XXL</button>
+                                </div>
+                            </div>
+                            <div class="products__colors">
+                                <p class="products__color__text">Color: Blue</p>
+
+                                <div class="products__colors__main">
+                                <button class="products__colors__box active" data-color="blue"></button>
+                                <button class="products__colors__box" data-color="black"></button>
+                                <button class="products__colors__box" data-color="pink"></button>
+                                </div>
+                            </div>
+                            <div class="products__quantity">
+                                <p class="products__quantity__text">Quantity</p>
+
+                                <div class="products__quantity__main">
+                                <div class="products__quantity__box">
+                                        <button id="minus">-</button>
+                                        <p id="number">1</p>
+                                        <button id="plus">+</button>
+                                </div>
+                                <button class="products__quantity__item">Add to cart</button>
+                                </div>
+                            </div>
+                            <div class="products__tools">
+                                <div class="products__tools__item">
+                                <i class="ri-arrow-up-down-line"></i>
+                                <p>Compare</p>
+
+                                </div>
+                                <div class="products__tools__item">
+                                <i class="ri-question-line"></i>
+                                <p>Ask a question</p>
+                                </div>
+                                <div class="products__tools__item">
+                                <i class="ri-stackshare-line"></i>
+                                <p>Share</p>
+                                </div>
+                            </div>
+                            <div class="products__info">
+                                <div class="products__info__item">
+                                <img src="./images/produckts-delivery.png" alt="icon">
+                                <p>Estimated Delivery:</p>
+                                <span>Jul 30 - Aug 03</span>
+                                </div>
+                                <div class="products__info__item">
+                                <img src="./images/produckts-free-shopping.png" alt="icon">
+                                <p>Free Shipping & Returns:</p>
+                                <span>On all orders over $75</span>
+                                </div>
+                            </div>
+                            <div class="products__company">
+                                <img src="./images/products-company-img.png" alt="img">
+                                <p class="products__company__text">Guarantee safe & secure checkout</p>
+                            </div>
+                        </div>
+    `
+    }
+}
+
+
+function openProduct(index) {
+    const shopIndex = shopArr[index]
+    productArr.push(shopIndex);
+    goProduct()
+}
